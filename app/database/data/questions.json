@@ -1,0 +1,461 @@
+[
+  {
+    "question_id": "iot_home_1",
+    "topic_id": "iot_home",
+    "question": "¿Cuáles son los principales beneficios de implementar soluciones IoT en el hogar?",
+    "keywords": ["iot", "casa", "hogar"],
+    "synonyms": ["domótica", "inteligente", "conectado", "automatizado"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 85
+  },
+  {
+    "question_id": "iot_home_2",
+    "topic_id": "iot_home",
+    "question": "¿Cómo se integra un dispositivo IoT doméstico a la red Wi-Fi de la casa?",
+    "keywords": ["iot", "domótico", "smart"],
+    "synonyms": ["automatización", "remoto", "sensores", "app"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 86
+  },
+  {
+    "question_id": "iot_home_3",
+    "topic_id": "iot_home",
+    "question": "¿Qué protocolos de comunicación son comunes en sistemas IoT para el hogar?",
+    "keywords": ["casa", "hogar", "smart"],
+    "synonyms": ["conectividad", "redes", "dispositivos", "control"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 87
+  },
+  {
+    "question_id": "iot_home_4",
+    "topic_id": "iot_home",
+    "question": "¿Cómo se asegura la interoperabilidad entre diferentes dispositivos IoT en un hogar inteligente?",
+    "keywords": ["domótico", "casa", "iot"],
+    "synonyms": ["electrónica", "automatizado", "integración", "sistema"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 88
+  },
+
+  {
+    "question_id": "leak_prevention_1",
+    "topic_id": "leak_prevention",
+    "question": "¿Cuáles son las causas más frecuentes de fugas de agua en tuberías domésticas?",
+    "keywords": ["fugas", "mantenimiento", "agua"],
+    "synonyms": ["derrame", "fuga", "revisión", "reparación"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 82
+  },
+  {
+    "question_id": "leak_prevention_2",
+    "topic_id": "leak_prevention",
+    "question": "¿Qué métodos utiliza WaterFlow para detectar fugas de agua en el hogar?",
+    "keywords": ["tubería", "agua", "mantenimiento"],
+    "synonyms": ["conducto", "sellado", "inspección", "fuga"],
+    "project": "waterflow",
+    "difficulty": "intermediate",
+    "weight": 83
+  },
+  {
+    "question_id": "leak_prevention_3",
+    "topic_id": "leak_prevention",
+    "question": "¿Cómo influye la temperatura ambiente en el riesgo de congelamiento y ruptura de tuberías?",
+    "keywords": ["fugas", "tubería", "agua"],
+    "synonyms": ["detección", "alarma", "sensor", "humedad"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 84
+  },
+  {
+    "question_id": "leak_prevention_4",
+    "topic_id": "leak_prevention",
+    "question": "¿Qué medidas de mantenimiento preventivo recomiendan para evitar daños por agua en invierno?",
+    "keywords": ["mantenimiento", "agua", "fugas"],
+    "synonyms": ["prevención", "servicio", "costo", "revisión"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 85
+  },
+
+  {
+    "question_id": "remote_control_1",
+    "topic_id": "remote_control",
+    "question": "¿Cómo controla la app de WaterFlow las válvulas de agua en tiempo real?",
+    "keywords": ["control", "remoto", "app"],
+    "synonyms": ["aplicación", "notificaciones", "movil", "automático"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 80
+  },
+  {
+    "question_id": "remote_control_2",
+    "topic_id": "remote_control",
+    "question": "¿Qué tipo de alertas y notificaciones envía el sistema de control remoto al usuario?",
+    "keywords": ["automatización", "control", "remoto"],
+    "synonyms": ["programación", "rutinas", "temporizador", "alerta"],
+    "project": "waterflow",
+    "difficulty": "intermediate",
+    "weight": 81
+  },
+  {
+    "question_id": "remote_control_3",
+    "topic_id": "remote_control",
+    "question": "¿Cómo se configuran rutinas automatizadas para el encendido y apagado de válvulas?",
+    "keywords": ["notificaciones", "app", "control"],
+    "synonyms": ["push", "SMS", "correo", "alerta"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 82
+  },
+  {
+    "question_id": "remote_control_4",
+    "topic_id": "remote_control",
+    "question": "¿Qué consideraciones de accesibilidad incluye la interfaz móvil para usuarios mayores?",
+    "keywords": ["control", "automatización", "app"],
+    "synonyms": ["interfaz", "usuario", "pantalla", "móvil"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 83
+  },
+
+  {
+    "question_id": "carbon_footprint_1",
+    "topic_id": "carbon_footprint",
+    "question": "¿Qué elementos evalúa CleanLyfe para calcular la huella de carbono de un usuario?",
+    "keywords": ["huella", "carbono", "emisiones"],
+    "synonyms": ["CO2", "impacto", "tasa", "cálculo"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 90
+  },
+  {
+    "question_id": "carbon_footprint_2",
+    "topic_id": "carbon_footprint",
+    "question": "¿Cómo se interpretan los resultados del cálculo de huella de carbono en CleanLyfe?",
+    "keywords": ["impacto", "emisiones", "carbono"],
+    "synonyms": ["ambiental", "efecto", "sostenible", "reducción"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 91
+  },
+  {
+    "question_id": "carbon_footprint_3",
+    "topic_id": "carbon_footprint",
+    "question": "¿Qué factores de emisión considera la plataforma al medir CO₂ generado por transporte?",
+    "keywords": ["CO2", "emisiones", "huella"],
+    "synonyms": ["factor", "consumo", "transporte", "energía"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 92
+  },
+  {
+    "question_id": "carbon_footprint_4",
+    "topic_id": "carbon_footprint",
+    "question": "¿Qué estrategias sugiere CleanLyfe para reducir las emisiones de carbono en el hogar?",
+    "keywords": ["cálculo", "impacto", "emisiones"],
+    "synonyms": ["formulación", "metodología", "IPCC", "sector"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 93
+  },
+
+  {
+    "question_id": "water_footprint_1",
+    "topic_id": "water_footprint",
+    "question": "¿Cómo define CleanLyfe la huella hídrica azul, verde y gris?",
+    "keywords": ["agua", "huella", "hídrica"],
+    "synonyms": ["consumo", "responsable", "eficiencia", "reutilización"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 88
+  },
+  {
+    "question_id": "water_footprint_2",
+    "topic_id": "water_footprint",
+    "question": "¿Qué acciones puede tomar un usuario para reducir su consumo de agua en el hogar?",
+    "keywords": ["hindrica", "agua", "impacto"],
+    "synonyms": ["gris", "verde", "azul", "índice"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 89
+  },
+  {
+    "question_id": "water_footprint_3",
+    "topic_id": "water_footprint",
+    "question": "¿Cómo se mide el consumo indirecto de agua asociado a productos y alimentos?",
+    "keywords": ["consumo", "agua", "hogar"],
+    "synonyms": ["ducha", "grifo", "fuga", "uso"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 90
+  },
+  {
+    "question_id": "water_footprint_4",
+    "topic_id": "water_footprint",
+    "question": "¿Qué indicadores muestra el dashboard de CleanLyfe para el seguimiento de la huella hídrica?",
+    "keywords": ["huella", "responsable", "agua"],
+    "synonyms": ["estrategias", "reducción", "monitoreo", "datos"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 91
+  },
+
+  {
+    "question_id": "gamification_1",
+    "topic_id": "gamification",
+    "question": "¿Cómo implementa CleanLyfe gamificación para motivar misiones ecológicas?",
+    "keywords": ["juegos", "misiones", "recompensas"],
+    "synonyms": ["puntos", "niveles", "retos", "logros"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 77
+  },
+  {
+    "question_id": "gamification_2",
+    "topic_id": "gamification",
+    "question": "¿Qué tipos de recompensas ofrece el sistema al completar retos ecológicos?",
+    "keywords": ["gamificación", "hábitos", "sostenibilidad"],
+    "synonyms": ["motivación", "jugador", "experiencia", "feedback"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 78
+  },
+  {
+    "question_id": "gamification_3",
+    "topic_id": "gamification",
+    "question": "¿Cómo se integra el sistema de niveles y puntos en la experiencia de usuario?",
+    "keywords": ["misiones", "recompensas", "juegos"],
+    "synonyms": ["reto", "educativo", "social", "colaborativo"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 79
+  },
+  {
+    "question_id": "gamification_4",
+    "topic_id": "gamification",
+    "question": "¿Qué elementos de diseño lúdico aumentan la retención de hábitos sostenibles?",
+    "keywords": ["niveles", "logros", "puntos"],
+    "synonyms": ["ranking", "desafíos", "progreso", "dashboard"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 80
+  },
+
+  {
+    "question_id": "data_visualization_1",
+    "topic_id": "data_visualization",
+    "question": "¿Qué métricas ambientales se presentan en el dashboard de CleanLyfe?",
+    "keywords": ["dashboard", "visualización", "KPIs"],
+    "synonyms": ["gráficos", "métricas", "tabla", "reportes"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 70
+  },
+  {
+    "question_id": "data_visualization_2",
+    "topic_id": "data_visualization",
+    "question": "¿Cómo permite el sistema filtrar y comparar KPIs de sostenibilidad?",
+    "keywords": ["métricas", "reportes", "visualización"],
+    "synonyms": ["indicadores", "estadísticas", "comparativa", "benchmark"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 71
+  },
+  {
+    "question_id": "data_visualization_3",
+    "topic_id": "data_visualization",
+    "question": "¿Qué formatos de gráficos utiliza CleanLyfe para visualizar datos ecológicos?",
+    "keywords": ["KPIs", "dashboard", "gráficos"],
+    "synonyms": ["panel", "vista", "interactivo", "monitoreo"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 72
+  },
+  {
+    "question_id": "data_visualization_4",
+    "topic_id": "data_visualization",
+    "question": "¿Cómo se actualizan en tiempo real los datos mostrados en el dashboard?",
+    "keywords": ["visualización", "tabla", "datos"],
+    "synonyms": ["diseño", "UX", "color", "legibilidad"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 73
+  },
+
+  {
+    "question_id": "eco_education_1",
+    "topic_id": "eco_education",
+    "question": "¿Qué contenidos de educación ambiental ofrece CleanLyfe para familias?",
+    "keywords": ["sostenibilidad", "familia", "hábitos"],
+    "synonyms": ["escuela", "hogar", "conciencia", "actividad"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 75
+  },
+  {
+    "question_id": "eco_education_2",
+    "topic_id": "eco_education",
+    "question": "¿Cómo se diseñan actividades prácticas para enseñar sostenibilidad en el hogar?",
+    "keywords": ["educación", "sostenibilidad", "familia"],
+    "synonyms": ["taller", "curso", "dinámica", "juego"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 76
+  },
+  {
+    "question_id": "eco_education_3",
+    "topic_id": "eco_education",
+    "question": "¿Qué recursos interactivos incluye el módulo de educación ambiental?",
+    "keywords": ["hábitos", "familia", "sostenibilidad"],
+    "synonyms": ["reciclaje", "conservación", "ecosistema", "nivel"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 77
+  },
+  {
+    "question_id": "eco_education_4",
+    "topic_id": "eco_education",
+    "question": "¿Cómo se mide el aprendizaje y la participación de los usuarios en actividades ambientales?",
+    "keywords": ["familia", "conciencia", "actividad"],
+    "synonyms": ["padres", "niños", "proyecto", "meta"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 78
+  },
+
+  {
+    "question_id": "chatbot_info_1",
+    "topic_id": "chatbot_info",
+    "question": "¿Cómo busca y selecciona el chatbot la respuesta más relevante a una consulta?",
+    "keywords": ["chatbot", "búsqueda", "respuesta"],
+    "synonyms": ["algoritmo", "ranking", "consulta", "resultado"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 65
+  },
+  {
+    "question_id": "chatbot_info_2",
+    "topic_id": "chatbot_info",
+    "question": "¿Qué algoritmos de puntuación utiliza el sistema para rankear preguntas?",
+    "keywords": ["sistema", "chatbot", "búsqueda"],
+    "synonyms": ["backend", "base", "datos", "conexión"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 66
+  },
+  {
+    "question_id": "chatbot_info_3",
+    "topic_id": "chatbot_info",
+    "question": "¿Cómo gestiona el chatbot la rotación de respuestas para evitar repetición?",
+    "keywords": ["respuesta", "sistema", "chatbot"],
+    "synonyms": ["procesamiento", "selección", "rotación", "uso"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 67
+  },
+  {
+    "question_id": "chatbot_info_4",
+    "topic_id": "chatbot_info",
+    "question": "¿Cuáles son las limitaciones de la base de conocimiento estructurada del chatbot?",
+    "keywords": ["consulta", "respuesta", "ranking"],
+    "synonyms": ["prioridad", "filtro", "synonym", "score"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 68
+  },
+
+  {
+    "question_id": "iot_security_1",
+    "topic_id": "iot_security",
+    "question": "¿Qué prácticas de seguridad recomienda WaterFlow para proteger la red IoT doméstica?",
+    "keywords": ["seguridad", "iot", "protección"],
+    "synonyms": ["cifrado", "firewall", "autenticación", "acceso"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 92
+  },
+  {
+    "question_id": "iot_security_2",
+    "topic_id": "iot_security",
+    "question": "¿Cómo autentica el sistema WaterFlow a los dispositivos conectados?",
+    "keywords": ["redes", "dispositivos", "seguridad"],
+    "synonyms": ["vulnerabilidad", "ataque", "mitigación", "monitor"],
+    "project": "waterflow",
+    "difficulty": "intermediate",
+    "weight": 93
+  },
+  {
+    "question_id": "iot_security_3",
+    "topic_id": "iot_security",
+    "question": "¿Qué mecanismos de cifrado utiliza el sistema para proteger la comunicación?",
+    "keywords": ["protección", "iot", "redes"],
+    "synonyms": ["VPN", "SSL", "TLS", "actualización"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 94
+  },
+  {
+    "question_id": "iot_security_4",
+    "topic_id": "iot_security",
+    "question": "¿Cómo se gestionan las actualizaciones y parches de seguridad en sistemas IoT?",
+    "keywords": ["seguridad", "dispositivos", "redes"],
+    "synonyms": ["patch", "backup", "monitor", "alerta"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 95
+  },
+  {
+    "question_id": "recommendations_1",
+    "topic_id": "recommendations",
+    "question": "¿Qué recomendaciones ofrece WaterFlow para prevenir fugas y daños por agua en el hogar?",
+    "keywords": ["fugas", "prevención", "mantenimiento"],
+    "synonyms": ["consejos", "sugerencias", "prácticas", "guía"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 88
+  },
+  {
+    "question_id": "recommendations_2",
+    "topic_id": "recommendations",
+    "question": "¿Qué acciones aconseja CleanLyfe para reducir la huella de carbono en actividades diarias?",
+    "keywords": ["huella", "carbono", "reducción"],
+    "synonyms": ["consejos", "tips", "estrategias", "prácticas"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 90
+  },
+  {
+    "question_id": "recommendations_3",
+    "topic_id": "recommendations",
+    "question": "¿Cómo puedo optimizar mi consumo de agua en casa según las recomendaciones de CleanLyfe?",
+    "keywords": ["agua", "consumo", "optimización"],
+    "synonyms": ["ahorro", "eficiencia", "sugerencias", "prácticas"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 86
+  },
+  {
+    "question_id": "recommendations_4",
+    "topic_id": "recommendations",
+    "question": "¿Qué buenas prácticas de seguridad recomienda WaterFlow para proteger mi red IoT doméstica?",
+    "keywords": ["seguridad", "iot", "prácticas"],
+    "synonyms": ["consejos", "recomendaciones", "medidas", "protocolo"],
+    "project": "waterflow",
+    "difficulty": "intermediate",
+    "weight": 87
+  },
+  {
+    "question_id": "recommendations_5",
+    "topic_id": "recommendations",
+    "question": "¿Qué consejos generales sugiere el chatbot para mantener un estilo de vida más sostenible?",
+    "keywords": ["sostenibilidad", "hábitos", "consejos"],
+    "synonyms": ["recomendaciones", "prácticas", "tips", "rutinas"],
+    "project": "both",
+    "difficulty": "basic",
+    "weight": 85
+  }
+]
