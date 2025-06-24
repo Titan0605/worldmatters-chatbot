@@ -15,6 +15,19 @@ textarea.addEventListener("keydown", function (e) {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
     console.log("Enviar mensaje:", this.value);
+
+    fetch('/text/send-text', {
+        method: 'POST',
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify({"text": this.value.split('\n').join(' ')})
+      }
+    )
+    .then(data => data.json())
+    .then(response =>
+      console.log(response.message)
+    )
+
+
     this.value = "";
     this.style.height = "auto";
   }
