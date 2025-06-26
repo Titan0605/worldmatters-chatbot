@@ -29,24 +29,41 @@ def send_text():
             route_logger.warning("No 'text' field in request")
             return jsonify({"status": "error", "message": "You must send data in field 'text'"}), 400
 
-        # Proccess the text and get the keywords
-        result = get_keywords(question)
-        # Search in DB for more words to extend the search
-        result['extended_words'] = kw_model.get_extended_words(result['key_words'])
-        
+        try:
+            # Proccess the text and get the keywords
+            result = get_keywords(question)
+        except Exception as e:
+            route_logger.error(f"Error extracting keywords: {e}")
+            return jsonify({"status": "error", "message": "Error extracting keywords"}), 500
+
+        try:
+            # Search in DB for more words to extend the search
+            result['extended_words'] = kw_model.get_extended_words(result['key_words'])
+        except Exception as e:
+            route_logger.error(f"Error getting extended words: {e}")
+            result['extended_words'] = {}
+
         route_logger.info(f"Keywords extracted: {result}")
-        
-        # With all the words search between the questions to get the top 5(default)
-        top_questions = search_relevant_questions(
-            result['key_words'],
-            result['extended_words']
-        )
-        
-        # Format the results for a better understanding of the scores
-        formatted_questions = format_search_results(top_questions)
-        
+
+        try:
+            # With all the words search between the questions to get the top 5(default)
+            top_questions = search_relevant_questions(
+                result['key_words'],
+                result['extended_words']
+            )
+        except Exception as e:
+            route_logger.error(f"Error searching relevant questions: {e}")
+            top_questions = []
+
+        try:
+            # Format the results for a better understanding of the scores
+            formatted_questions = format_search_results(top_questions)
+        except Exception as e:
+            route_logger.error(f"Error formatting search results: {e}")
+            formatted_questions = []
+
         route_logger.info(f"Top questions: {formatted_questions}")
-        
+
         return jsonify({"status": "success", "message": "Text successfully received", "result": result}), 200
 
     except ValueError as ve:

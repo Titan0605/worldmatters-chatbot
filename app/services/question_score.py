@@ -21,26 +21,34 @@ def search_relevant_questions(processed_words: list, extended_words: dict, top_n
         list: List of queries ranked by relevancy
     """
     
-    # Get all questions from the database
-    all_questions = question_model.get_all_questions()
-    
+    try:
+        # Get all questions from the database
+        all_questions = question_model.get_all_questions()
+    except Exception as e:
+        question_score_logger.error(f"Error fetching questions: {e}")
+        return []
+
     scored_questions = []
     
     # Calculate score for each question
     for question_doc in all_questions:
-        score_result = calculate_question_score(processed_words, extended_words, question_doc)
-        
-        # Only include questions with score > 0
-        if score_result['final_score'] > 0:
-            scored_questions.append(score_result)
-    
+        try:
+            score_result = calculate_question_score(processed_words, extended_words, question_doc)
+            
+            # Only include questions with score > 0
+            if score_result['final_score'] > 0:
+                scored_questions.append(score_result)
+        except Exception as e:
+            question_score_logger.error(f"Error scoring question: {e}")
+            continue
+
     # Sort by descending score
     scored_questions.sort(key=lambda x: x['final_score'], reverse=True)
     
     # Return top N results
     return scored_questions[:top_n]
 
-def calculate_question_score(processed_words: list, extended_words: dict[str, list], question_doc: dict) -> dict:
+def calculate_question_score(processed_words: list, extended_words: dict, question_doc: dict) -> dict:
     """
     Calculates the relevance score of a question based on word matches.
     
@@ -67,8 +75,15 @@ def calculate_question_score(processed_words: list, extended_words: dict[str, li
         'related_matches': []
     }
     
+    # Safe extraction of extended words
+    synonyms = extended_words.get('synonyms', []) if isinstance(extended_words, dict) else []
+    related = extended_words.get('related', []) if isinstance(extended_words, dict) else []
+
     # Combine all search words
-    all_search_words = set(processed_words + extended_words['synonyms'] + extended_words['related'])
+    if not synonyms and not related:
+        all_search_words = set(processed_words)
+    else:
+        all_search_words = set(processed_words + synonyms + related)
     
     # Obtain keywords and synonyms for the question
     question_keywords = set(question_doc.get('keywords', []))
@@ -89,7 +104,7 @@ def calculate_question_score(processed_words: list, extended_words: dict[str, li
         match_details['synonym_matches'].append(match)
     
     # 3. Check related words
-    extended_set = set( extended_words['synonyms'] + extended_words['related']) - set(processed_words)
+    extended_set = set(synonyms + related) - set(processed_words)
     related_matches = extended_set.intersection(question_keywords.union(question_synonyms))
     for match in related_matches:
         total_score += RELATED_SCORE
@@ -97,7 +112,11 @@ def calculate_question_score(processed_words: list, extended_words: dict[str, li
         match_details['related_matches'].append(match)
     
     # 4. Project context bonus
-    project_context = detect_project_context(processed_words, extended_words)
+    try:
+        project_context = detect_project_context(processed_words, extended_words)
+    except Exception as e:
+        question_score_logger.error(f"Error detecting project context: {e}")
+        project_context = None
     question_project = question_doc.get('project', '')
     
     if project_context and (project_context == question_project or question_project == 'both'):
@@ -122,19 +141,29 @@ def calculate_question_score(processed_words: list, extended_words: dict[str, li
         'base_weight': base_weight
     }
 
-def detect_project_context(processed_words: list, extended_words: dict[str, list]) -> None | Literal['waterflow'] | Literal['cleanlyfe']:
+def detect_project_context(processed_words: list, extended_words: dict) -> None | Literal['waterflow'] | Literal['cleanlyfe']:
     """
     Detects which project the query refers to based on key terms.
     
     Returns:
         str: 'waterflow', 'cleanlyfe' or None
     """
-    all_words = set(processed_words + extended_words['synonyms'] + extended_words['related'])
+    try:
+        synonyms = extended_words.get('synonyms', []) if isinstance(extended_words, dict) else []
+        related = extended_words.get('related', []) if isinstance(extended_words, dict) else []
+        all_words = set(processed_words + synonyms + related)
+    except Exception as e:
+        question_score_logger.error(f"Error extracting words for project context: {e}")
+        all_words = set(processed_words)
     waterflow_terms = []
     cleanlyfe_terms = []
     
-    keywords_in_db = keywords_model.get_keywords_per_project()
-    
+    try:
+        keywords_in_db = keywords_model.get_keywords_per_project()
+    except Exception as e:
+        question_score_logger.error(f"Error fetching keywords per project: {e}")
+        return None
+
     for keyword in keywords_in_db:
         match keyword['project']:
             case "waterflow":
@@ -146,16 +175,16 @@ def detect_project_context(processed_words: list, extended_words: dict[str, list
                 cleanlyfe_terms.append(keyword['word'])
             case _:
                 continue
-            
+
     waterflow_terms = set(waterflow_terms)
     cleanlyfe_terms = set(cleanlyfe_terms)
-    
+
     waterflow_matches = len(all_words.intersection(waterflow_terms))
     cleanlyfe_matches = len(all_words.intersection(cleanlyfe_terms))
-    
+
     if waterflow_matches > cleanlyfe_matches and waterflow_matches > 0:
         return 'waterflow'
     elif cleanlyfe_matches > waterflow_matches and cleanlyfe_matches > 0:
         return 'cleanlyfe'
-    
+
     return None

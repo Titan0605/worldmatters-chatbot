@@ -10,7 +10,7 @@ from loguru import logger
 text_logger = logger.bind(name=__name__)
 
 try:
-    # Descargar stopwords solo si no están presentes
+    # Download stopwords only if they are not present
     nltk.data.find('corpora/stopwords')
 except LookupError:
     nltk.download('stopwords')
@@ -27,7 +27,7 @@ except Exception as e:
     text_logger.error(f"Error loading NLTK stopwords: {e}")
     STOPWORDS = set()
 
-def get_keywords(texto):
+def get_keywords(text):
     """
     Extracts keywords (nouns, verbs, adjectives) from a Spanish text, eliminating stopwords and normalizing the text.
     It uses spaCy for morphological analysis and NLTK for stopwords.
@@ -44,19 +44,19 @@ def get_keywords(texto):
     Raises:
         ValueError: If the text is invalid or an error occurs during processing.
     """
-    text_logger.info("Processing text...")
+    text_logger.info(f"Processing text..., text received: {text}")
     try:
-        if not isinstance(texto, str) or not texto.strip():
+        if not isinstance(text, str) or not text.strip():
             raise ValueError("Input text must be a non-empty string.")
 
-        texto = texto.lower()
-        texto = unicodedata.normalize("NFD", texto).encode("ascii", "ignore").decode("utf-8")
-        texto = re.sub(r"[^a-zA-Z0-9\s]", "", texto)
+        text = text.lower()
+        text = unicodedata.normalize("NFD", text).encode("ascii", "ignore").decode("utf-8")
+        text = re.sub(r"[^a-zA-Z0-9\s]", "", text)
 
-        doc = nlp(texto)
+        doc = nlp(text)
         key_words = []
         for token in doc:
-            if token.is_alpha and token.lemma_ not in STOPWORDS and token.pos_ in ['NOUN', 'VERB', 'ADJ']:
+            if token.is_alpha and token.lemma_ not in STOPWORDS and token.pos_ in ['NOUN', 'VERB', 'ADJ', 'PROPN']:
                 key_words.append(token.lemma_)
                 key_words.append(token.text)
                 

@@ -48,5 +48,55 @@
         "match_breakdown": { "exact": 1, "synonyms": 0, "related": 1 }
       }
     ]
+  },
+  {
+    "question_id": 2,
+    "results_scored": [
+      {
+        "rank": 1,
+        "question": "¿Cómo se interpretan los resultados del cálculo de huella de carbono en CleanLyfe?",
+        "project": "CLEANLYFE",
+        "topic": "carbon_footprint",
+        "score": 600.6,
+        "matches": ["reduccion", "carbono", "emisiones", "impacto", "huella", "CO2"],
+        "match_breakdown": { "exact": 4, "synonyms": 2, "related": 4 }
+      },
+      {
+        "rank": 2,
+        "question": "¿Qué factores de emisión considera la plataforma al medir CO₂ generado por transporte?",
+        "project": "CLEANLYFE",
+        "topic": "carbon_footprint",
+        "score": 579.6,
+        "matches": ["carbono", "emisiones", "factor", "huella", "CO2"],
+        "match_breakdown": { "exact": 4, "synonyms": 2, "related": 3 }
+      },
+      {
+        "rank": 3,
+        "question": "¿Qué elementos evalúa CleanLyfe para calcular la huella de carbono de un usuario?",
+        "project": "CLEANLYFE",
+        "topic": "carbon_footprint",
+        "score": 558.0,
+        "matches": ["carbono", "emisiones", "impacto", "factor", "huella", "CO2"],
+        "match_breakdown": { "exact": 3, "synonyms": 3, "related": 4 }
+      },
+      {
+        "rank": 4,
+        "question": "¿Qué estrategias sugiere CleanLyfe para reducir las emisiones de carbono en el hogar?",
+        "project": "CLEANLYFE",
+        "topic": "carbon_footprint",
+        "score": 530.1,
+        "matches": ["carbono", "emisiones", "impacto", "CO2", "reducir"],
+        "match_breakdown": { "exact": 4, "synonyms": 1, "related": 3 }
+      },
+      {
+        "rank": 5,
+        "question": "¿Qué acciones aconseja CleanLyfe para reducir la huella de carbono en actividades diarias?",
+        "project": "CLEANLYFE",
+        "topic": "recommendations",
+        "score": 405.0,
+        "matches": ["reducir", "reduccion", "huella", "carbono"],
+        "match_breakdown": { "exact": 4, "synonyms": 0, "related": 1 }
+      }
+    ]
   }
 ]
