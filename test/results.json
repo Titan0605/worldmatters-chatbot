@@ -1,0 +1,52 @@
+[
+  {
+    "question_id": 1,
+    "results_scored": [
+      {
+        "rank": 1,
+        "question": "¿Cómo controla la app de WaterFlow las válvulas de agua en tiempo real?",
+        "project": "WATERFLOW",
+        "topic": "remote_control",
+        "score": 200.0,
+        "matches": ["valvula", "control"],
+        "match_breakdown": { "exact": 2, "synonyms": 0, "related": 1 }
+      },
+      {
+        "rank": 2,
+        "question": "¿Cómo se mide el consumo indirecto de agua asociado a productos y alimentos?",
+        "project": "CLEANLYFE",
+        "topic": "water_footprint",
+        "score": 198.0,
+        "matches": ["agua", "grifo"],
+        "match_breakdown": { "exact": 1, "synonyms": 1, "related": 2 }
+      },
+      {
+        "rank": 3,
+        "question": "¿Qué medidas de mantenimiento preventivo recomiendan para evitar daños por agua en invierno?",
+        "project": "WATERFLOW",
+        "topic": "leak_prevention",
+        "score": 127.5,
+        "matches": ["agua"],
+        "match_breakdown": { "exact": 1, "synonyms": 0, "related": 1 }
+      },
+      {
+        "rank": 4,
+        "question": "¿Cómo influye la temperatura ambiente en el riesgo de congelamiento y ruptura de tuberías?",
+        "project": "WATERFLOW",
+        "topic": "leak_prevention",
+        "score": 126.0,
+        "matches": ["agua"],
+        "match_breakdown": { "exact": 1, "synonyms": 0, "related": 1 }
+      },
+      {
+        "rank": 5,
+        "question": "¿Qué métodos utiliza WaterFlow para detectar fugas de agua en el hogar?",
+        "project": "WATERFLOW",
+        "topic": "leak_prevention",
+        "score": 124.5,
+        "matches": ["agua"],
+        "match_breakdown": { "exact": 1, "synonyms": 0, "related": 1 }
+      }
+    ]
+  }
+]

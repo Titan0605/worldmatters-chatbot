@@ -23,7 +23,19 @@ class KeywordsModel:
             self._collection = get_collection("keywords")
         return self._collection
     
-    def get_related_words(self, words: list[str] | None = None) -> list[str]:
+    def get_keywords_per_project(self):
+        db: Collection = self.collection
+        
+        query = {
+            "_id": 0,
+            "word": 1,
+            "project": 1
+        }
+        
+        results = list(db.find({}, query))
+        return results
+    
+    def get_extended_words(self, words: list[str] | None = None) -> dict:
         if words is None:
             kw_model_logger.error("A word must be send as an argument")
             raise ValueError("Words list cannot be None")
@@ -50,7 +62,7 @@ class KeywordsModel:
         
         try:
             cursor = db.aggregate(pipeline)
-            results: list[str] = []
+            results: dict = {}
             
             for document in cursor:
                 synonyms = document.get('synonyms', [])
@@ -58,14 +70,14 @@ class KeywordsModel:
                 
                 if synonyms:
                     kw_model_logger.info(f"Synonyms found: {synonyms}")
-                    results.extend(synonyms)
+                    results['synonyms'] = synonyms
                 if related:
                     kw_model_logger.info(f"Related words found: {related}")
-                    results.extend(related)
+                    results['related'] = related
                 
         except Exception as e:
             kw_model_logger.error(f"Error getting related words: {str(e)}")
-            return []
+            return {}
             
-        kw_model_logger.info(f"Related words successfully obtained: {results}")
-        return list(set(results))  # Removing duplicates
+        kw_model_logger.info(f"Extended words successfully obtained: {results}")
+        return results

@@ -62,7 +62,7 @@ def get_keywords(texto):
                 
         key_words = list(set(key_words))
         count = Counter(key_words)
-        text_logger.info('Text successfully processed')
+        text_logger.success('Text successfully processed')
         return {
             "key_words": key_words,
             "count": dict(count),
