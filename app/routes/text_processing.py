@@ -28,9 +28,6 @@ def send_text():
             return jsonify({"status": "error", "message": "You must send data in field 'text'"}), 400
 
         result = get_keywords(question)
-        
-        kw_model.quick_debug(result['key_words'])
-        
         result['related_words'] = kw_model.get_related_words(result['key_words'])
         
         route_logger.info(f"Keywords extracted: {result}")

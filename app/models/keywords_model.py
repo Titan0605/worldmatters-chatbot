@@ -23,27 +23,6 @@ class KeywordsModel:
             self._collection = get_collection("keywords")
         return self._collection
     
-    def quick_debug(self, words: list[str]):
-        """Debug rápido"""
-        db = self.collection
-        
-        # 1. Verificar colección
-        total = db.count_documents({})
-        print(f"Total docs: {total}")
-        
-        # 2. Ver algunos documentos
-        samples = list(db.find().limit(3))
-        print(f"Sample docs: {samples}")
-        
-        # 3. Buscar específicamente 'valvula'
-        valvula = db.find_one({"word": "valvula"})
-        print(f"Valvula doc: {valvula}")
-        
-        # 4. Probar el aggregation
-        pipeline = [{"$match": {"word": {"$in": words}}}]
-        results = list(db.aggregate(pipeline))
-        print(f"Aggregation results: {results}")
-    
     def get_related_words(self, words: list[str] | None = None) -> list[str]:
         if words is None:
             kw_model_logger.error("A word must be send as an argument")
@@ -81,6 +60,7 @@ class KeywordsModel:
                     kw_model_logger.info(f"Synonyms found: {synonyms}")
                     results.extend(synonyms)
                 if related:
+                    kw_model_logger.info(f"Related words found: {related}")
                     results.extend(related)
                 
         except Exception as e:
