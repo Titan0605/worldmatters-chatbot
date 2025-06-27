@@ -7,7 +7,7 @@ def format_search_results(search_results) -> list:
     Format search results to display relevant information.
     """
     if not search_results:
-        formatting_logger.error("No relevant questions were found for your query.")
+        formatting_logger.warning("No relevant questions were found for your query.")
         return []
     
     formatted_results = []

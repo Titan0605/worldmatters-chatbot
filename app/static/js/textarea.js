@@ -35,6 +35,27 @@ textarea.addEventListener("keydown", function (e) {
     messagesContainer.appendChild(userMessage);
     scrollToBottom();
 
+    // Add loading message for bot
+    const loadingMessage = document.createElement("div");
+    loadingMessage.className = "flex items-start space-x-3 bot-loading";
+    loadingMessage.innerHTML = `
+      <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center flex-shrink-0">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <div class="bg-gray-50 rounded-lg rounded-tl-none p-3">
+        <div class="flex space-x-1">
+          <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
+          <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+          <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+        </div>
+        <span class="text-xs text-gray-500 block mt-1">Procesando...</span>
+      </div>
+    `;
+    messagesContainer.appendChild(loadingMessage);
+    scrollToBottom();
+
     fetch("/text/send-text", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -42,6 +63,10 @@ textarea.addEventListener("keydown", function (e) {
     })
       .then((data) => data.json())
       .then((response) => {
+        // Remove loading message
+        const loading = document.querySelector('.bot-loading');
+        if (loading) loading.remove();
+
         // Add bot response
         const botMessage = document.createElement("div");
         botMessage.className = "flex items-start space-x-3";
@@ -49,26 +74,46 @@ textarea.addEventListener("keydown", function (e) {
         let botResponse = "";
         if (response.ambiguous) {
           botResponse = `
-          <p class="text-gray-800">${response.message}</p>
-          <div class="mt-2">
-            <p class="text-gray-700 font-medium">¿Te refieres a alguna de estas preguntas?</p>
-            <ul class="mt-1 space-y-1">
-              ${response.suggestions
-                .map(
-                  (q) => `
-                <li class="text-blue-600 hover:text-blue-700 cursor-pointer">
-                  ${q.question}
-                </li>
-              `
-                )
-                .join("")}
-            </ul>
-          </div>
-        `;
+            <div class="mb-2">
+              <span class="inline-flex items-center px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full">
+                <svg class="w-4 h-4 mr-1 text-yellow-500 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" /></svg>
+                Ambigüedad
+              </span>
+            </div>
+            <p class="text-gray-800 font-medium mb-2">${response.message}</p>
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
+              <p class="text-gray-700 font-semibold mb-1">¿Te refieres a alguna de estas preguntas?</p>
+              <ul class="space-y-2">
+                ${response.suggestions
+                  .map(
+                    (q, idx) => `
+                  <li class="p-2 bg-white rounded hover:bg-blue-100 border border-blue-100 cursor-pointer transition suggested-question" data-question="${encodeURIComponent(q.question)}">
+                    <span class="font-medium text-blue-700">${idx + 1}.</span> <span class="text-gray-800">${q.question}</span>
+                  </li>
+                `
+                  )
+                  .join("")}
+              </ul>
+            </div>
+          `;
         } else if (response.response) {
           botResponse = `
-          <p class="text-gray-800">${response.response.response_text}</p>
-        `;
+            <div class="mb-2 flex items-center space-x-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" /></svg>
+              <span class="text-green-700 font-semibold">Respuesta encontrada</span>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg p-3 mb-2">
+              <p class="text-gray-900 leading-relaxed">${response.response.response_text}</p>
+            </div>
+            ${response.response.follow_up && response.response.follow_up.length ? `
+              <div class="mt-2">
+                <span class="text-xs text-gray-500 font-medium">¿Te interesa saber más?</span>
+                <ul class="mt-1 space-y-1">
+                  ${response.response.follow_up.map(fu => `<li class="text-blue-600 hover:text-blue-700 cursor-pointer text-sm">• ${fu}</li>`).join('')}
+                </ul>
+              </div>
+            ` : ''}
+          `;
         } else {
           botResponse = `<p class="text-gray-800">${response.message}</p>`;
         }
@@ -87,8 +132,24 @@ textarea.addEventListener("keydown", function (e) {
 
         messagesContainer.appendChild(botMessage);
         scrollToBottom();
+
+        // NUEVO: Hacer sugerencias clickeables para autocompletar el textarea
+        const suggestedQuestions = botMessage.querySelectorAll('.suggested-question');
+        suggestedQuestions.forEach(suggested_question => {
+          suggested_question.addEventListener('click', function() {
+            const question = decodeURIComponent(this.getAttribute('data-question'));
+            textarea.value = question;
+            textarea.focus();
+            // Ajustar altura del textarea
+            textarea.style.height = 'auto';
+            textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px';
+          });
+        });
       })
       .catch((error) => {
+        // Remove loading message if error
+        const loading = document.querySelector('.bot-loading');
+        if (loading) loading.remove();
         console.error("Error:", error);
         const messagesContainer = document.getElementById("messages-container");
         const errorMessage = document.createElement("div");

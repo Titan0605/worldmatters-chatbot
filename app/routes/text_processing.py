@@ -72,10 +72,31 @@ def send_text():
             "result": result
         }
 
+        # Check for exact match with any question in DB
+        exact_match = None
+        for q in formatted_questions:
+            if question.strip().lower() == q['question'].strip().lower():
+                exact_match = q
+                break
+
+        if exact_match:
+            try:
+                responses = resp_model.get_responses(exact_match['question_id'])
+                if responses:
+                    chosen_response = responses[0]  # Always pick the first for exact match
+                    response_data.update({
+                        "ambiguous": False,
+                        "response": chosen_response,
+                        "question": exact_match
+                    })
+                else:
+                    response_data["message"] = "No se encontraron respuestas para esta pregunta"
+            except Exception as e:
+                route_logger.error(f"Error getting responses: {e}")
+                response_data["message"] = "Error al obtener la respuesta"
         # Check if we have at least two questions to compare
-        if len(formatted_questions) >= 2:
+        elif len(formatted_questions) >= 2:
             score_diff = abs(formatted_questions[0]['score'] - formatted_questions[1]['score'])
-            
             if score_diff < 100:
                 # Case: Ambiguous question
                 top_3_questions = formatted_questions[:3]
