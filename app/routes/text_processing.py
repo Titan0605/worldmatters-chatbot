@@ -29,7 +29,7 @@ def send_text():
         question = data.get('text', '')
         if not question:
             route_logger.warning("No 'text' field in request")
-            return jsonify({"status": "error", "message": "You must send data in field 'text'"}), 400
+            return jsonify({"status": "error", "message": "You must send a question"}), 400
 
         try:
             # Proccess the text and get the keywords
@@ -124,7 +124,7 @@ def send_text():
                     route_logger.error(f"Error getting responses: {e}")
                     response_data["message"] = "Error al obtener la respuesta"
         else:
-            response_data["message"] = "No se encontraron preguntas relacionadas"
+            response_data["message"] = "No tengo una respuesta a tu pregunta."
 
         return jsonify(response_data), 200
 

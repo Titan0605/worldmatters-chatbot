@@ -1,52 +1,5 @@
 [
   {
-    "question_id": "iot_home_1",
-    "response_text": "Los sistemas IoT domésticos como WaterFlow ofrecen múltiples beneficios transformadores para tu hogar. Principalmente, te brindan control remoto total sobre tus dispositivos desde cualquier lugar usando tu smartphone, lo que significa que puedes monitorear y gestionar tu casa incluso cuando estás fuera. La automatización inteligente es otro gran beneficio: el sistema puede aprender tus rutinas y ejecutar acciones automáticamente, como cerrar válvulas cuando detecta fugas o ajustar horarios según tus hábitos. Además, la detección temprana de problemas te permite prevenir daños costosos, especialmente importante en zonas como Chihuahua donde las temperaturas extremas pueden afectar las tuberías.",
-    "response_type": "explanation",
-    "tone": "casual",
-    "confidence_bonus": 25,
-    "follow_up": ["¿Cómo se instala WaterFlow en casa?", "¿Qué sensores utiliza el sistema?", "¿Es seguro el control remoto?"],
-    "usage_count": 0
-  },
-  {
-    "question_id": "iot_home_1",
-    "response_text": "Implementar IoT en el hogar con sistemas como WaterFlow revoluciona completamente la gestión doméstica. El beneficio más inmediato es la tranquilidad: imagina poder verificar desde tu trabajo si hay alguna fuga en casa o si las tuberías están en riesgo por temperaturas bajas. La eficiencia energética también mejora significativamente, ya que puedes controlar el uso de agua de manera más precisa y evitar desperdicios. Para personas mayores o con movilidad limitada, el control remoto elimina la necesidad de acceso físico a válvulas difíciles de alcanzar, haciendo el hogar más accesible y seguro.",
-    "response_type": "explanation",
-    "tone": "formal",
-    "confidence_bonus": 20,
-    "follow_up": ["¿Qué pasa si se va el internet?", "¿Cuánto se ahorra en agua?", "¿Funciona con cualquier válvula?"],
-    "usage_count": 0
-  },
-  {
-    "question_id": "iot_home_1",
-    "response_text": "La tecnología IoT doméstica, especialmente con WaterFlow, transforma tu casa en un ecosistema inteligente que cuida de sí mismo. Los beneficios van desde la prevención de desastres (como inundaciones por tuberías rotas en invierno) hasta la optimización de recursos y costos. El sistema te mantiene informado constantemente sobre el estado de tu hogar, enviando alertas inteligentes solo cuando realmente necesitas actuar. Esto es especialmente valioso para familias que viajan frecuentemente o adultos mayores que necesitan mayor seguridad en su hogar sin complicaciones técnicas.",
-    "response_type": "explanation",
-    "tone": "technical",
-    "confidence_bonus": 15,
-    "follow_up": ["¿Cómo funciona la detección de fugas?", "¿Se puede integrar con otros dispositivos?", "¿Qué mantenimiento requiere?"],
-    "usage_count": 0
-  },
-
-  {
-    "question_id": "iot_home_2",
-    "response_text": "La integración de dispositivos IoT como WaterFlow a tu red Wi-Fi es un proceso diseñado para ser simple y seguro. Primero, el dispositivo entra en modo de configuración, creando su propia red temporal que puedes ver en tu teléfono. Te conectas a esta red temporal y utilizas la app de WaterFlow para introducir los datos de tu Wi-Fi doméstico (nombre y contraseña). El dispositivo entonces se desconecta de su red temporal y se conecta permanentemente a tu red hogareña. Durante este proceso, se establecen protocolos de seguridad como cifrado WPA2 para proteger la comunicación. Una vez conectado, el dispositivo aparece en tu app y está listo para ser controlado remotamente.",
-    "response_type": "steps",
-    "tone": "casual",
-    "confidence_bonus": 25,
-    "follow_up": ["¿Qué hago si no se conecta?", "¿Es segura esta conexión?", "¿Afecta la velocidad del Wi-Fi?"],
-    "usage_count": 0
-  },
-  {
-    "question_id": "iot_home_2",
-    "response_text": "El proceso de integración de dispositivos IoT a la red doméstica utiliza protocolos estándar de la industria para garantizar compatibilidad y seguridad. WaterFlow implementa un sistema de configuración asistida donde el dispositivo genera un punto de acceso temporal (AP mode) que facilita la transferencia segura de credenciales de red. Una vez que el dispositivo recibe la información de tu router, ejecuta un handshake de autenticación y establece una conexión cifrada usando protocolos WPA2/WPA3. El sistema también incluye verificación de certificados para prevenir ataques man-in-the-middle durante la configuración inicial.",
-    "response_type": "explanation",
-    "tone": "technical",
-    "confidence_bonus": 20,
-    "follow_up": ["¿Qué es WPA3?", "¿Cómo se actualizan los certificados?", "¿Qué pasa con redes mesh?"],
-    "usage_count": 0
-  },
-
-  {
     "question_id": "leak_prevention_1",
     "response_text": "Las fugas de agua en hogares tienen varias causas principales que WaterFlow está diseñado para detectar tempranamente. El envejecimiento de tuberías es la causa más común: con el tiempo, los materiales se degradan, especialmente en uniones y codos donde hay más estrés mecánico. Los cambios bruscos de temperatura, muy comunes en Chihuahua, causan expansión y contracción que debilita las conexiones y puede provocar grietas. La corrosión interna, especialmente en tuberías metálicas, crea puntos débiles que eventualmente fallan. También están las obstrucciones que aumentan la presión interna, y las instalaciones deficientes donde las conexiones no fueron selladas correctamente desde el inicio.",
     "response_type": "explanation",
@@ -216,26 +169,6 @@
     "follow_up": ["¿Qué es TF-IDF?", "¿Cómo funciona el boosting por contexto?", "¿Puedes explicar el rotation scheduling?"],
     "usage_count": 0
   },
-
-  {
-    "question_id": "iot_security_1",
-    "response_text": "WaterFlow implementa múltiples capas de seguridad para proteger tu red IoT doméstica de manera integral. La primera recomendación es mantener tu router con firmware actualizado y cambiar las contraseñas predeterminadas por unas fuertes y únicas. El sistema WaterFlow utiliza cifrado WPA3 para toda comunicación inalámbrica y certificados digitales para autenticar dispositivos legítimos. También es importante crear una red separada para dispositivos IoT, aislándolos de computadoras y teléfonos que contienen información personal sensible. WaterFlow incluye monitoreo de tráfico de red que detecta comportamientos anómalos y puede alertarte sobre posibles intentos de intrusión. Además, el sistema se actualiza automáticamente con parches de seguridad, eliminando vulnerabilidades conocidas sin que tengas que hacer nada.",
-    "response_type": "explanation",
-    "tone": "casual",
-    "confidence_bonus": 25,
-    "follow_up": ["¿Cómo creo una red separada para IoT?", "¿Qué pasa si alguien hackea mi sistema?", "¿Con qué frecuencia se actualiza?"],
-    "usage_count": 0
-  },
-  {
-    "question_id": "iot_security_1",
-    "response_text": "La estrategia de seguridad de WaterFlow implementa un modelo de zero-trust architecture específicamente diseñado para entornos IoT domésticos. El sistema utiliza mutual TLS authentication con certificate pinning para establecer canales seguros entre dispositivos y servicios cloud, mientras que el firmware emplea secure boot con verified signatures para prevenir la ejecución de código malicioso. La plataforma incluye anomaly detection basado en machine learning que establece baselines de comportamiento normal para cada dispositivo y detecta desviaciones que podrían indicar compromise. Adicionalmente, implementa network segmentation a nivel de VLAN con micro-segmentation policies que limitan la comunicación lateral entre dispositivos, reduciendo el blast radius en caso de breach.",
-    "response_type": "explanation",
-    "tone": "technical",
-    "confidence_bonus": 20,
-    "follow_up": ["¿Qué es zero-trust architecture?", "¿Cómo funciona el secure boot?", "¿Qué es micro-segmentation?"],
-    "usage_count": 0
-  },
-
   {
     "question_id": "recommendations_1",
     "response_text": "WaterFlow recomienda un enfoque preventivo multicapa para proteger tu hogar contra fugas y daños por agua. La primera línea de defensa es la inspección regular: revisa visualmente las tuberías expuestas mensualmente, especialmente en conexiones y codos donde suelen aparecer las primeras señales de desgaste. Durante el invierno en Chihuahua, es crucial mantener un goteo mínimo en grifos durante las noches más frías para evitar congelamiento, y asegurarte de que las tuberías en áreas no calefaccionadas estén aisladas adecuadamente. WaterFlow también sugiere conocer la ubicación de tu llave de paso principal para poder cerrarla rápidamente en emergencias, y mantener los números de contacto de plomeros confiables siempre a mano. El sistema mismo complementa estas prácticas con monitoreo 24/7 y alertas tempranas que te dan tiempo de actuar antes de que un problema menor se convierta en un desastre costoso.",
@@ -540,33 +473,6 @@
     "tone": "casual",
     "confidence_bonus": 20,
     "follow_up": ["¿Cómo mejoro mis consultas?", "¿Qué temas faltan en la base?"],
-    "usage_count": 0
-  },
-  {
-    "question_id": "iot_security_2",
-    "response_text": "WaterFlow autentica dispositivos usando mutual TLS: cada dispositivo posee un certificado único que se valida contra la autoridad raíz en el servidor antes de permitir comunicación.",
-    "response_type": "explanation",
-    "tone": "casual",
-    "confidence_bonus": 20,
-    "follow_up": ["¿Cómo renuevo los certificados?", "¿Puedo usar certificados personalizados?"],
-    "usage_count": 0
-  },
-  {
-    "question_id": "iot_security_3",
-    "response_text": "Utiliza cifrado TLS 1.3 para la comunicación y AES-256 para datos en reposo. Además, la integración con VPN opcional añade otra capa de cifrado a nivel de red.",
-    "response_type": "explanation",
-    "tone": "casual",
-    "confidence_bonus": 20,
-    "follow_up": ["¿Cómo activo la VPN?", "¿Qué algoritmos usan?"],
-    "usage_count": 0
-  },
-  {
-    "question_id": "iot_security_4",
-    "response_text": "El sistema descarga parches automáticamente vía OTA y valida la firma digital antes de aplicarlos. En caso de falla, realiza rollback a la versión anterior para mantener la operatividad.",
-    "response_type": "explanation",
-    "tone": "casual",
-    "confidence_bonus": 20,
-    "follow_up": ["¿Cómo veo el historial de actualizaciones?", "¿Puedo bloquear actualizaciones?"],
     "usage_count": 0
   }
 ]

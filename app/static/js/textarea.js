@@ -6,43 +6,51 @@ function scrollToBottom() {
 window.addEventListener("load", scrollToBottom);
 
 const textarea = document.querySelector("textarea");
+const sendButton = document.getElementById("send-button");
+
 textarea.addEventListener("input", function () {
   this.style.height = "auto";
   this.style.height = Math.min(this.scrollHeight, 120) + "px";
 });
 
-textarea.addEventListener("keydown", function (e) {
+textarea.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
-    console.log("Enviar mensaje:", this.value);
+    proccessQuestion(textarea.value);
+  }
+});
 
-    const messagesContainer = document.getElementById("messages-container");
+sendButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  proccessQuestion(textarea.value);
+});
 
-    // Add user message
-    const userMessage = document.createElement("div");
-    userMessage.className = "flex items-start space-x-3 justify-end";
-    userMessage.innerHTML = `
+function proccessQuestion(questionText) {
+  console.log("Enviar mensaje:", questionText);
+
+  const messagesContainer = document.getElementById("messages-container");
+
+  // Add user message
+  const userMessage = document.createElement("div");
+  userMessage.className = "flex items-start space-x-3 justify-end";
+  userMessage.innerHTML = `
       <div class="bg-blue-400 rounded-lg rounded-tr-none p-3 max-w-md">
-        <p class="text-white">${this.value}</p>
+        <p class="text-white">${questionText}</p>
         <span class="text-xs text-blue-100 mt-1 block">Ahora</span>
       </div>
       <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-        <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-        </svg>
+        <i class="fa-solid fa-user text-gray-600"></i>
       </div>
     `;
-    messagesContainer.appendChild(userMessage);
-    scrollToBottom();
+  messagesContainer.appendChild(userMessage);
+  scrollToBottom();
 
-    // Add loading message for bot
-    const loadingMessage = document.createElement("div");
-    loadingMessage.className = "flex items-start space-x-3 bot-loading";
-    loadingMessage.innerHTML = `
+  // Add loading message for bot
+  const loadingMessage = document.createElement("div");
+  loadingMessage.className = "flex items-start space-x-3 bot-loading";
+  loadingMessage.innerHTML = `
       <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center flex-shrink-0">
-        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
-        </svg>
+        <i class="fa-solid fa-robot text-white"></i>
       </div>
       <div class="bg-gray-50 rounded-lg rounded-tl-none p-3">
         <div class="flex space-x-1">
@@ -53,27 +61,27 @@ textarea.addEventListener("keydown", function (e) {
         <span class="text-xs text-gray-500 block mt-1">Procesando...</span>
       </div>
     `;
-    messagesContainer.appendChild(loadingMessage);
-    scrollToBottom();
+  messagesContainer.appendChild(loadingMessage);
+  scrollToBottom();
 
-    fetch("/text/send-text", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: this.value.split("\n").join(" ") }),
-    })
-      .then((data) => data.json())
-      .then((response) => {
-        // Remove loading message
-        const loading = document.querySelector('.bot-loading');
-        if (loading) loading.remove();
+  fetch("/text/send-text", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: (questionText || "").split("\n").join(" ") }),
+  })
+    .then((data) => data.json())
+    .then((response) => {
+      // Remove loading message
+      const loading = document.querySelector(".bot-loading");
+      if (loading) loading.remove();
 
-        // Add bot response
-        const botMessage = document.createElement("div");
-        botMessage.className = "flex items-start space-x-3";
+      // Add bot response
+      const botMessage = document.createElement("div");
+      botMessage.className = "flex items-start space-x-3";
 
-        let botResponse = "";
-        if (response.ambiguous) {
-          botResponse = `
+      let botResponse = "";
+      if (response.ambiguous) {
+        botResponse = `
             <div class="mb-2">
               <span class="inline-flex items-center px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full">
                 <svg class="w-4 h-4 mr-1 text-yellow-500 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" /></svg>
@@ -96,8 +104,8 @@ textarea.addEventListener("keydown", function (e) {
               </ul>
             </div>
           `;
-        } else if (response.response) {
-          botResponse = `
+      } else if (response.response) {
+        botResponse = `
             <div class="mb-2 flex items-center space-x-2">
               <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" /></svg>
               <span class="text-green-700 font-semibold">Respuesta encontrada</span>
@@ -105,24 +113,26 @@ textarea.addEventListener("keydown", function (e) {
             <div class="bg-white border border-gray-200 rounded-lg p-3 mb-2">
               <p class="text-gray-900 leading-relaxed">${response.response.response_text}</p>
             </div>
-            ${response.response.follow_up && response.response.follow_up.length ? `
+            ${
+              response.response.follow_up && response.response.follow_up.length
+                ? `
               <div class="mt-2">
                 <span class="text-xs text-gray-500 font-medium">¿Te interesa saber más?</span>
                 <ul class="mt-1 space-y-1">
-                  ${response.response.follow_up.map(fu => `<li class="text-blue-600 hover:text-blue-700 cursor-pointer text-sm">• ${fu}</li>`).join('')}
+                  ${response.response.follow_up.map((fu) => `<li class="text-blue-600 hover:text-blue-700 cursor-pointer text-sm">• ${fu}</li>`).join("")}
                 </ul>
               </div>
-            ` : ''}
+            `
+                : ""
+            }
           `;
-        } else {
-          botResponse = `<p class="text-gray-800">${response.message}</p>`;
-        }
+      } else {
+        botResponse = `<p class="text-gray-800">${response.message}</p>`;
+      }
 
-        botMessage.innerHTML = `
+      botMessage.innerHTML = `
         <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center flex-shrink-0">
-          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
-          </svg>
+          <i class="fa-solid fa-robot text-white"></i>
         </div>
         <div class="bg-gray-50 rounded-lg rounded-tl-none p-3 max-w-lg">
           ${botResponse}
@@ -130,31 +140,30 @@ textarea.addEventListener("keydown", function (e) {
         </div>
       `;
 
-        messagesContainer.appendChild(botMessage);
-        scrollToBottom();
+      messagesContainer.appendChild(botMessage);
+      scrollToBottom();
 
-        // NUEVO: Hacer sugerencias clickeables para autocompletar el textarea
-        const suggestedQuestions = botMessage.querySelectorAll('.suggested-question');
-        suggestedQuestions.forEach(suggested_question => {
-          suggested_question.addEventListener('click', function() {
-            const question = decodeURIComponent(this.getAttribute('data-question'));
-            textarea.value = question;
-            textarea.focus();
-            // Ajustar altura del textarea
-            textarea.style.height = 'auto';
-            textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px';
-          });
+      const suggestedQuestions = botMessage.querySelectorAll(".suggested-question");
+      suggestedQuestions.forEach((suggested_question) => {
+        suggested_question.addEventListener("click", function () {
+          const question = decodeURIComponent(this.getAttribute("data-question"));
+          textarea.value = question;
+          textarea.focus();
+          // Ajustar altura del textarea
+          textarea.style.height = "auto";
+          textarea.style.height = Math.min(textarea.scrollHeight, 120) + "px";
         });
-      })
-      .catch((error) => {
-        // Remove loading message if error
-        const loading = document.querySelector('.bot-loading');
-        if (loading) loading.remove();
-        console.error("Error:", error);
-        const messagesContainer = document.getElementById("messages-container");
-        const errorMessage = document.createElement("div");
-        errorMessage.className = "flex items-start space-x-3";
-        errorMessage.innerHTML = `
+      });
+    })
+    .catch((error) => {
+      // Remove loading message if error
+      const loading = document.querySelector(".bot-loading");
+      if (loading) loading.remove();
+      console.error("Error:", error);
+      const messagesContainer = document.getElementById("messages-container");
+      const errorMessage = document.createElement("div");
+      errorMessage.className = "flex items-start space-x-3";
+      errorMessage.innerHTML = `
         <div class="w-8 h-8 bg-red-400 rounded-full flex items-center justify-center flex-shrink-0">
           <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
@@ -165,11 +174,10 @@ textarea.addEventListener("keydown", function (e) {
           <span class="text-xs text-red-500 mt-1 block">Ahora</span>
         </div>
       `;
-        messagesContainer.appendChild(errorMessage);
-        scrollToBottom();
-      });
+      messagesContainer.appendChild(errorMessage);
+      scrollToBottom();
+    });
 
-    this.value = "";
-    this.style.height = "auto";
-  }
-});
+  textarea.value = "";
+  textarea.style.height = "auto";
+}

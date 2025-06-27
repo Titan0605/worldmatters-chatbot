@@ -1,14 +1,5 @@
 [
   {
-    "topic_id": "iot_home",
-    "name": "Tecnología IoT aplicada al hogar",
-    "description": "Información sobre IoT doméstico y WaterFlow",
-    "keywords": ["iot", "casa", "hogar", "domótico", "smart"],
-    "projects": ["waterflow", "cleanlyfe"],
-    "icon": "🔧",
-    "priority": 8
-  },
-  {
     "topic_id": "leak_prevention",
     "name": "Prevención de fugas y mantenimiento doméstico",
     "description": "Detección de fugas, mantenimiento y costos de daños por agua",
@@ -79,15 +70,6 @@
     "projects": ["waterflow", "cleanlyfe"],
     "icon": "🗃️",
     "priority": 5
-  },
-  {
-    "topic_id": "iot_security",
-    "name": "Seguridad y mantenimiento de sistemas IoT",
-    "description": "Buenas prácticas para proteger dispositivos y redes domésticas",
-    "keywords": ["seguridad", "iot", "protección", "redes", "dispositivos"],
-    "projects": ["waterflow"],
-    "icon": "🔐",
-    "priority": 8
   },
   {
     "topic_id": "recommendations",

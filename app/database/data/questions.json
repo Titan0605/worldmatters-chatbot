@@ -1,35 +1,5 @@
 [
   {
-    "question_id": "iot_home_1",
-    "topic_id": "iot_home",
-    "question": "¿Cuáles son los principales beneficios de implementar soluciones IoT en el hogar?",
-    "keywords": ["iot", "casa", "hogar", "beneficio", "principal", "implementar", "solucion"],
-    "synonyms": ["domotica", "inteligente", "conectado", "automatizado", "smart", "ventaja", "provecho", "aplicar", "instalar", "casa", "residencia", "vivienda"],
-    "project": "waterflow",
-    "difficulty": "basic",
-    "weight": 85
-  },
-  {
-    "question_id": "iot_home_2",
-    "topic_id": "iot_home",
-    "question": "¿Cómo se integra un dispositivo IoT doméstico a la red Wi-Fi de la casa?",
-    "keywords": ["iot", "domotico", "smart", "integrar", "dispositivo", "red", "wifi", "casa"],
-    "synonyms": ["automatizacion", "remoto", "sensores", "app", "conectar", "configurar", "aparato", "equipo", "hogar", "vivienda", "internet", "conexion"],
-    "project": "cleanlyfe",
-    "difficulty": "intermediate",
-    "weight": 86
-  },
-  {
-    "question_id": "iot_home_3",
-    "topic_id": "iot_home",
-    "question": "¿Qué protocolos de comunicación son comunes en sistemas IoT para el hogar?",
-    "keywords": ["casa", "hogar", "smart", "protocolo", "comunicacion", "comun", "sistema", "iot"],
-    "synonyms": ["conectividad", "redes", "dispositivos", "control", "domotica", "inteligente", "standard", "estandar", "metodo", "vivienda"],
-    "project": "waterflow",
-    "difficulty": "advanced",
-    "weight": 87
-  },
-  {
     "question_id": "leak_prevention_1",
     "topic_id": "leak_prevention",
     "question": "¿Cuáles son las causas más frecuentes de fugas de agua en tuberías domésticas?",
@@ -348,46 +318,6 @@
     "project": "waterflow",
     "difficulty": "basic",
     "weight": 68
-  },
-  {
-    "question_id": "iot_security_1",
-    "topic_id": "iot_security",
-    "question": "¿Qué prácticas de seguridad recomienda WaterFlow para proteger la red IoT doméstica?",
-    "keywords": ["seguridad", "iot", "proteccion", "practica", "recomendar", "waterflow", "proteger", "red", "domestico"],
-    "synonyms": ["cifrado", "firewall", "autenticacion", "acceso", "metodo", "sugerir", "cuidar", "internet", "casa"],
-    "project": "waterflow",
-    "difficulty": "basic",
-    "weight": 92
-  },
-  {
-    "question_id": "iot_security_2",
-    "topic_id": "iot_security",
-    "question": "¿Cómo autentica el sistema WaterFlow a los dispositivos conectados?",
-    "keywords": ["redes", "dispositivos", "seguridad", "autenticar", "sistema", "waterflow", "conectar"],
-    "synonyms": ["vulnerabilidad", "ataque", "mitigacion", "monitor", "verificar", "aparato", "unir"],
-    "project": "waterflow",
-    "difficulty": "intermediate",
-    "weight": 93
-  },
-  {
-    "question_id": "iot_security_3",
-    "topic_id": "iot_security",
-    "question": "¿Qué mecanismos de cifrado utiliza el sistema para proteger la comunicación?",
-    "keywords": ["proteccion", "iot", "redes", "mecanismo", "cifrado", "utilizar", "sistema", "proteger", "comunicacion"],
-    "synonyms": ["VPN", "SSL", "TLS", "actualizacion", "metodo", "encriptar", "usar", "cuidar", "conexion"],
-    "project": "waterflow",
-    "difficulty": "advanced",
-    "weight": 94
-  },
-  {
-    "question_id": "iot_security_4",
-    "topic_id": "iot_security",
-    "question": "¿Cómo se gestionan las actualizaciones y parches de seguridad en sistemas IoT?",
-    "keywords": ["seguridad", "dispositivos", "redes", "gestionar", "actualizacion", "parche", "sistema", "iot"],
-    "synonyms": ["patch", "backup", "monitor", "alerta", "manejar", "renovar", "reparar", "aparato"],
-    "project": "waterflow",
-    "difficulty": "basic",
-    "weight": 95
   },
   {
     "question_id": "recommendations_1",
