@@ -44,7 +44,7 @@
     </header>
 
     <!-- Main -->
-    <main class="flex flex-col min-h-[calc(100vh-4rem)] overflow-hidden p-4 sm:p-6"">
+    <main class="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] overflow-hidden p-4 sm:p-6"">
       {% block main %}{% endblock %}
     </main>
 
@@ -63,6 +63,6 @@
       </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/textarea-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/textarea.js') }}"></script>
   </body>
 </html>

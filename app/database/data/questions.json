@@ -1,0 +1,372 @@
+[
+  {
+    "question_id": "leak_prevention_1",
+    "topic_id": "leak_prevention",
+    "question": "¿Cuáles son las causas más frecuentes de fugas de agua en tuberías domésticas?",
+    "keywords": ["fugas", "mantenimiento", "agua", "causa", "frecuente", "tuberia", "domestico"],
+    "synonyms": ["derrame", "fuga", "revision", "reparacion", "goteo", "escape", "motivo", "razon", "comun", "habitual", "conducto", "caneria", "casa", "hogar"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 82
+  },
+  {
+    "question_id": "leak_prevention_2",
+    "topic_id": "leak_prevention",
+    "question": "¿Qué métodos utiliza WaterFlow para detectar fugas de agua en el hogar?",
+    "keywords": ["tuberia", "agua", "mantenimiento", "metodo", "utilizar", "waterflow", "detectar", "fuga", "hogar"],
+    "synonyms": ["conducto", "sellado", "inspeccion", "fuga", "sistema", "forma", "manera", "usar", "emplear", "encontrar", "localizar", "goteo", "derrame", "casa"],
+    "project": "waterflow",
+    "difficulty": "intermediate",
+    "weight": 83
+  },
+  {
+    "question_id": "leak_prevention_3",
+    "topic_id": "leak_prevention",
+    "question": "¿Cómo influye la temperatura ambiente en el riesgo de congelamiento y ruptura de tuberías?",
+    "keywords": ["fugas", "tuberia", "agua", "influir", "temperatura", "ambiente", "riesgo", "congelamiento", "ruptura"],
+    "synonyms": ["deteccion", "alarma", "sensor", "humedad", "afectar", "clima", "frio", "helada", "peligro", "rotura", "quebrar", "conducto", "caneria"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 84
+  },
+  {
+    "question_id": "leak_prevention_4",
+    "topic_id": "leak_prevention",
+    "question": "¿Qué medidas de mantenimiento preventivo recomiendan para evitar daños por agua en invierno?",
+    "keywords": ["mantenimiento", "agua", "fugas", "medida", "preventivo", "recomendar", "evitar", "dano", "invierno"],
+    "synonyms": ["prevencion", "servicio", "costo", "revision", "accion", "cuidado", "sugerir", "aconsejar", "impedir", "problema", "frio", "helada"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 85
+  },
+  {
+    "question_id": "remote_control_1",
+    "topic_id": "remote_control",
+    "question": "¿Cómo controla la app de WaterFlow las válvulas de agua en tiempo real?",
+    "keywords": ["control", "remoto", "app", "controlar", "waterflow", "valvula", "agua", "tiempo", "real"],
+    "synonyms": ["aplicacion", "notificaciones", "movil", "automatico", "manejar", "dirigir", "llave", "grifo", "instantaneo", "momento", "celular", "movil"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 80
+  },
+  {
+    "question_id": "remote_control_2",
+    "topic_id": "remote_control",
+    "question": "¿Qué tipo de alertas y notificaciones envía el sistema de control remoto al usuario?",
+    "keywords": ["automatizacion", "control", "remoto", "tipo", "alerta", "notificacion", "enviar", "sistema", "usuario"],
+    "synonyms": ["programacion", "rutinas", "temporizador", "alerta", "clase", "avisos", "mensaje", "mandar", "persona", "cliente"],
+    "project": "waterflow",
+    "difficulty": "intermediate",
+    "weight": 81
+  },
+  {
+    "question_id": "remote_control_3",
+    "topic_id": "remote_control",
+    "question": "¿Cómo se configuran rutinas automatizadas para el encendido y apagado de válvulas?",
+    "keywords": ["notificaciones", "app", "control", "configurar", "rutina", "automatizar", "encendido", "apagado", "valvula"],
+    "synonyms": ["push", "SMS", "correo", "alerta", "ajustar", "establecer", "programa", "automatico", "activar", "desactivar", "llave", "grifo"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 82
+  },
+  {
+    "question_id": "remote_control_4",
+    "topic_id": "remote_control",
+    "question": "¿Qué consideraciones de accesibilidad incluye la interfaz móvil para usuarios mayores?",
+    "keywords": ["control", "automatizacion", "app", "consideracion", "accesibilidad", "incluir", "interfaz", "movil", "usuario", "mayor"],
+    "synonyms": ["interfaz", "usuario", "pantalla", "movil", "aspecto", "facilidad", "contener", "tener", "pantalla", "celular", "persona", "adulto", "anciano"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 83
+  },
+  {
+    "question_id": "carbon_footprint_1",
+    "topic_id": "carbon_footprint",
+    "question": "¿Qué elementos evalúa CleanLyfe para calcular la huella de carbono de un usuario?",
+    "keywords": ["huella", "carbono", "emisiones", "elemento", "evaluar", "cleanlyfe", "calcular", "calculadora", "usuario"],
+    "synonyms": ["CO2", "impacto", "tasa", "calculo", "componente", "factor", "analizar", "medir", "hacer", "computar", "persona", "cliente"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 90
+  },
+  {
+    "question_id": "carbon_footprint_2",
+    "topic_id": "carbon_footprint",
+    "question": "¿Cómo se interpretan los resultados del cálculo de huella de carbono en CleanLyfe?",
+    "keywords": ["impacto", "emisiones", "carbono", "interpretar", "resultado", "calculo", "huella", "cleanlyfe"],
+    "synonyms": ["ambiental", "efecto", "sostenible", "reduccion", "entender", "comprender", "dato", "informacion", "CO2", "calculadora"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 91
+  },
+  {
+    "question_id": "carbon_footprint_3",
+    "topic_id": "carbon_footprint",
+    "question": "¿Qué factores de emisión considera la plataforma al medir CO₂ generado por transporte?",
+    "keywords": ["CO2", "emisiones", "huella", "factor", "considerar", "plataforma", "medir", "generar", "transporte"],
+    "synonyms": ["factor", "consumo", "transporte", "energia", "carbono", "elemento", "tomar", "sistema", "calcular", "producir", "movilidad", "vehiculo"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 92
+  },
+  {
+    "question_id": "carbon_footprint_4",
+    "topic_id": "carbon_footprint",
+    "question": "¿Qué estrategias sugiere CleanLyfe para reducir las emisiones de carbono en el hogar?",
+    "keywords": ["calculo", "impacto", "emisiones", "estrategia", "sugerir", "cleanlyfe", "reducir", "carbono", "hogar"],
+    "synonyms": ["formulacion", "metodologia", "IPCC", "sector", "metodo", "forma", "recomendar", "aconsejar", "disminuir", "CO2", "casa", "vivienda"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 93
+  },
+  {
+    "question_id": "water_footprint_1",
+    "topic_id": "water_footprint",
+    "question": "¿Cómo define CleanLyfe la huella hídrica azul, verde y gris?",
+    "keywords": ["agua", "huella", "hidrica", "definir", "cleanlyfe", "azul", "verde", "gris"],
+    "synonyms": ["consumo", "responsable", "eficiencia", "reutilizacion", "explicar", "concepto", "tipo", "clase", "color"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 88
+  },
+  {
+    "question_id": "water_footprint_2",
+    "topic_id": "water_footprint",
+    "question": "¿Qué acciones puede tomar un usuario para reducir su consumo de agua en el hogar?",
+    "keywords": ["hidrica", "agua", "impacto", "accion", "tomar", "usuario", "reducir", "consumo", "hogar"],
+    "synonyms": ["gris", "verde", "azul", "indice", "medida", "hacer", "persona", "disminuir", "gasto", "uso", "casa"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 89
+  },
+  {
+    "question_id": "water_footprint_3",
+    "topic_id": "water_footprint",
+    "question": "¿Cómo se mide el consumo indirecto de agua asociado a productos y alimentos?",
+    "keywords": ["consumo", "agua", "hogar", "medir", "indirecto", "asociar", "producto", "alimento"],
+    "synonyms": ["ducha", "grifo", "fuga", "uso", "calcular", "oculto", "relacionar", "comida", "casa"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 90
+  },
+  {
+    "question_id": "water_footprint_4",
+    "topic_id": "water_footprint",
+    "question": "¿Qué indicadores muestra el dashboard de CleanLyfe para el seguimiento de la huella hídrica?",
+    "keywords": ["huella", "responsable", "agua", "indicador", "mostrar", "dashboard", "cleanlyfe", "seguimiento", "hidrica"],
+    "synonyms": ["estrategias", "reduccion", "monitoreo", "datos", "metrica", "ensenar", "panel", "tablero", "control", "rastreo"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 91
+  },
+  {
+    "question_id": "gamification_1",
+    "topic_id": "gamification",
+    "question": "¿Cómo implementa CleanLyfe gamificación para motivar misiones ecológicas?",
+    "keywords": ["juegos", "misiones", "recompensas", "implementar", "cleanlyfe", "gamificacion", "motivar", "ecologico"],
+    "synonyms": ["puntos", "niveles", "retos", "logros", "aplicar", "instalar", "juego", "animar", "ambiental", "verde"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 77
+  },
+  {
+    "question_id": "gamification_2",
+    "topic_id": "gamification",
+    "question": "¿Qué tipos de recompensas ofrece el sistema al completar retos ecológicos?",
+    "keywords": ["gamificacion", "habitos", "sostenibilidad", "tipo", "recompensa", "ofrecer", "sistema", "completar", "reto", "ecologico"],
+    "synonyms": ["motivacion", "jugador", "experiencia", "feedback", "clase", "premio", "dar", "terminar", "desafio", "ambiental"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 78
+  },
+  {
+    "question_id": "gamification_3",
+    "topic_id": "gamification",
+    "question": "¿Cómo se integra el sistema de niveles y puntos en la experiencia de usuario?",
+    "keywords": ["misiones", "recompensas", "juegos", "integrar", "sistema", "nivel", "punto", "experiencia", "usuario"],
+    "synonyms": ["reto", "educativo", "social", "colaborativo", "conectar", "unir", "grado", "score", "vivencia", "persona"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 79
+  },
+  {
+    "question_id": "gamification_4",
+    "topic_id": "gamification",
+    "question": "¿Qué elementos de diseño lúdico aumentan la retención de hábitos sostenibles?",
+    "keywords": ["niveles", "logros", "puntos", "elemento", "diseno", "ludico", "aumentar", "retencion", "habito", "sostenible"],
+    "synonyms": ["ranking", "desafios", "progreso", "dashboard", "componente", "creacion", "juego", "incrementar", "mantener", "costumbre", "verde"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 80
+  },
+  {
+    "question_id": "data_visualization_1",
+    "topic_id": "data_visualization",
+    "question": "¿Qué métricas ambientales se presentan en el dashboard de CleanLyfe?",
+    "keywords": ["dashboard", "visualizacion", "KPIs", "metrica", "ambiental", "presentar", "cleanlyfe"],
+    "synonyms": ["graficos", "metricas", "tabla", "reportes", "panel", "tablero", "indicador", "verde", "mostrar", "ensenar"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 70
+  },
+  {
+    "question_id": "data_visualization_2",
+    "topic_id": "data_visualization",
+    "question": "¿Cómo permite el sistema filtrar y comparar KPIs de sostenibilidad?",
+    "keywords": ["metricas", "reportes", "visualizacion", "permitir", "sistema", "filtrar", "comparar", "kpi", "sostenibilidad"],
+    "synonyms": ["indicadores", "estadisticas", "comparativa", "benchmark", "dejar", "seleccionar", "cotejar", "indicador", "sustentabilidad"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 71
+  },
+  {
+    "question_id": "data_visualization_3",
+    "topic_id": "data_visualization",
+    "question": "¿Qué formatos de gráficos utiliza CleanLyfe para visualizar datos ecológicos?",
+    "keywords": ["KPIs", "dashboard", "graficos", "formato", "grafico", "utilizar", "cleanlyfe", "visualizar", "dato", "ecologico"],
+    "synonyms": ["panel", "vista", "interactivo", "monitoreo", "tipo", "usar", "mostrar", "informacion", "ambiental", "verde"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 72
+  },
+  {
+    "question_id": "data_visualization_4",
+    "topic_id": "data_visualization",
+    "question": "¿Cómo se actualizan en tiempo real los datos mostrados en el dashboard?",
+    "keywords": ["visualizacion", "tabla", "datos", "actualizar", "tiempo", "real", "mostrar", "dashboard"],
+    "synonyms": ["diseno", "UX", "color", "legibilidad", "renovar", "momento", "instantaneo", "ensenar", "panel", "tablero"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 73
+  },
+  {
+    "question_id": "eco_education_1",
+    "topic_id": "eco_education",
+    "question": "¿Qué contenidos de educación ambiental ofrece CleanLyfe para familias?",
+    "keywords": ["sostenibilidad", "familia", "habitos", "contenido", "educacion", "ambiental", "ofrecer", "cleanlyfe"],
+    "synonyms": ["escuela", "hogar", "conciencia", "actividad", "material", "aprendizaje", "verde", "dar", "brindar"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 75
+  },
+  {
+    "question_id": "eco_education_2",
+    "topic_id": "eco_education",
+    "question": "¿Cómo se diseñan actividades prácticas para enseñar sostenibilidad en el hogar?",
+    "keywords": ["educacion", "sostenibilidad", "familia", "disenar", "actividad", "practico", "ensenar", "hogar"],
+    "synonyms": ["taller", "curso", "dinamica", "juego", "crear", "hacer", "ejercicio", "mostrar", "casa"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 76
+  },
+  {
+    "question_id": "eco_education_3",
+    "topic_id": "eco_education",
+    "question": "¿Qué recursos interactivos incluye el módulo de educación ambiental?",
+    "keywords": ["habitos", "familia", "sostenibilidad", "recurso", "interactivo", "incluir", "modulo", "educacion", "ambiental"],
+    "synonyms": ["reciclaje", "conservacion", "ecosistema", "nivel", "herramienta", "dinamico", "contener", "seccion", "aprendizaje", "verde"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 77
+  },
+  {
+    "question_id": "eco_education_4",
+    "topic_id": "eco_education",
+    "question": "¿Cómo se mide el aprendizaje y la participación de los usuarios en actividades ambientales?",
+    "keywords": ["familia", "conciencia", "actividad", "medir", "aprendizaje", "participacion", "usuario", "ambiental"],
+    "synonyms": ["padres", "ninos", "proyecto", "meta", "calcular", "educacion", "colaboracion", "persona", "verde"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 78
+  },
+  {
+    "question_id": "chatbot_info_1",
+    "topic_id": "chatbot_info",
+    "question": "¿Cómo busca y selecciona el chatbot la respuesta más relevante a una consulta?",
+    "keywords": ["chatbot", "busqueda", "respuesta", "buscar", "seleccionar", "relevante", "consulta"],
+    "synonyms": ["algoritmo", "ranking", "consulta", "resultado", "bot", "encontrar", "elegir", "importante", "pregunta"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 65
+  },
+  {
+    "question_id": "chatbot_info_2",
+    "topic_id": "chatbot_info",
+    "question": "¿Qué algoritmos de puntuación utiliza el sistema para rankear preguntas?",
+    "keywords": ["sistema", "chatbot", "busqueda", "algoritmo", "puntuacion", "utilizar", "rankear", "pregunta"],
+    "synonyms": ["backend", "base", "datos", "conexion", "metodo", "puntaje", "usar", "ordenar", "consulta"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 66
+  },
+  {
+    "question_id": "chatbot_info_3",
+    "topic_id": "chatbot_info",
+    "question": "¿Cómo gestiona el chatbot la rotación de respuestas para evitar repetición?",
+    "keywords": ["respuesta", "sistema", "chatbot", "gestionar", "rotacion", "evitar", "repeticion"],
+    "synonyms": ["procesamiento", "seleccion", "rotacion", "uso", "manejar", "cambio", "impedir", "duplicar"],
+    "project": "waterflow",
+    "difficulty": "advanced",
+    "weight": 67
+  },
+  {
+    "question_id": "chatbot_info_4",
+    "topic_id": "chatbot_info",
+    "question": "¿Cuáles son las limitaciones de la base de conocimiento estructurada del chatbot?",
+    "keywords": ["consulta", "respuesta", "ranking", "limitacion", "base", "conocimiento", "estructurar", "chatbot"],
+    "synonyms": ["prioridad", "filtro", "synonym", "score", "restriccion", "dato", "saber", "organizar", "bot"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 68
+  },
+  {
+    "question_id": "recommendations_1",
+    "topic_id": "recommendations",
+    "question": "¿Qué recomendaciones ofrece WaterFlow para prevenir fugas y daños por agua en el hogar?",
+    "keywords": ["fugas", "prevencion", "mantenimiento", "recomendacion", "ofrecer", "waterflow", "prevenir", "dano", "agua", "hogar"],
+    "synonyms": ["consejos", "sugerencias", "practicas", "guia", "dar", "evitar", "problema", "casa"],
+    "project": "waterflow",
+    "difficulty": "basic",
+    "weight": 88
+  },
+  {
+    "question_id": "recommendations_2",
+    "topic_id": "recommendations",
+    "question": "¿Qué acciones aconseja CleanLyfe para reducir la huella de carbono en actividades diarias?",
+    "keywords": ["huella", "carbono", "reduccion", "accion", "aconsejar", "cleanlyfe", "reducir", "actividad", "diario"],
+    "synonyms": ["consejos", "tips", "estrategias", "practicas", "medida", "sugerir", "disminuir", "tarea", "cotidiano"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 90
+  },
+  {
+    "question_id": "recommendations_3",
+    "topic_id": "recommendations",
+    "question": "¿Cómo puedo optimizar mi consumo de agua en casa según las recomendaciones de CleanLyfe?",
+    "keywords": ["agua", "consumo", "optimizacion", "optimizar", "casa", "recomendacion", "cleanlyfe"],
+    "synonyms": ["ahorro", "eficiencia", "sugerencias", "practicas", "mejorar", "hogar", "consejo"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 86
+  },
+  {
+    "question_id": "recommendations_4",
+    "topic_id": "recommendations",
+    "question": "¿Qué buenas prácticas de seguridad recomienda WaterFlow para proteger mi red IoT doméstica?",
+    "keywords": ["seguridad", "iot", "practicas", "bueno", "practica", "recomendar", "waterflow", "proteger", "red", "domestico"],
+    "synonyms": ["consejos", "recomendaciones", "medidas", "protocolo", "metodo", "sugerir", "cuidar", "internet", "casa"],
+    "project": "waterflow",
+    "difficulty": "intermediate",
+    "weight": 87
+  },
+  {
+    "question_id": "recommendations_5",
+    "topic_id": "recommendations",
+    "question": "¿Qué consejos generales sugiere el chatbot para mantener un estilo de vida más sostenible?",
+    "keywords": ["sostenibilidad", "habitos", "consejos", "general", "sugerir", "chatbot", "mantener", "estilo", "vida", "sostenible"],
+    "synonyms": ["recomendaciones", "practicas", "tips", "rutinas", "comun", "bot", "conservar", "forma", "vivir", "verde"],
+    "project": "both",
+    "difficulty": "basic",
+    "weight": 85
+  }
+]

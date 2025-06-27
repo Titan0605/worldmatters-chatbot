@@ -1,0 +1,386 @@
+[
+  {
+    "word": "iot",
+    "synonyms": ["domotica", "inteligente", "conectado", "automatizado", "smart"],
+    "related": ["casa", "hogar", "dispositivos", "control", "sensores"],
+    "domain": "iot",
+    "score": 100,
+    "project": "waterflow"
+  },
+  {
+    "word": "casa",
+    "synonyms": ["hogar", "domestico", "residencial"],
+    "related": ["iot", "smart", "automatizacion", "control"],
+    "domain": "iot",
+    "score": 85,
+    "project": null
+  },
+  {
+    "word": "automatizacion",
+    "synonyms": ["automatico", "programacion", "rutinas", "temporizador"],
+    "related": ["control", "iot", "smart", "dispositivos"],
+    "domain": "iot",
+    "score": 86,
+    "project": "waterflow"
+  },
+  {
+    "word": "sensores",
+    "synonyms": ["sensor", "deteccion", "monitoreo", "medicion"],
+    "related": ["iot", "control", "automatizacion", "datos"],
+    "domain": "iot",
+    "score": 90,
+    "project": "waterflow"
+  },
+  {
+    "word": "dispositivos",
+    "synonyms": ["aparatos", "equipos", "sistemas", "electronica"],
+    "related": ["iot", "conectividad", "redes", "control"],
+    "domain": "iot",
+    "score": 88,
+    "project": null
+  },
+  {
+    "word": "control",
+    "synonyms": ["manejo", "gestion", "administracion", "operacion"],
+    "related": ["remoto", "app", "automatizacion", "valvula"],
+    "domain": "iot",
+    "score": 95,
+    "project": "waterflow"
+  },
+  {
+    "word": "remoto",
+    "synonyms": ["distancia", "inalambrico", "wifi", "conexion"],
+    "related": ["control", "app", "movil", "automatizacion"],
+    "domain": "iot",
+    "score": 90,
+    "project": "waterflow"
+  },
+  {
+    "word": "app",
+    "synonyms": ["aplicacion", "movil", "celular", "interfaz"],
+    "related": ["control", "notificaciones", "usuario", "pantalla"],
+    "domain": "tech",
+    "score": 85,
+    "project": "waterflow"
+  },
+  {
+    "word": "notificaciones",
+    "synonyms": ["alertas", "avisos", "push", "SMS", "correo"],
+    "related": ["app", "control", "usuario", "sistema"],
+    "domain": "tech",
+    "score": 80,
+    "project": "waterflow"
+  },
+  {
+    "word": "agua",
+    "synonyms": ["liquido", "fluido", "hidrico"],
+    "related": ["tuberia", "valvula", "fuga", "consumo"],
+    "domain": "water",
+    "score": 100,
+    "project": null
+  },
+  {
+    "word": "valvula",
+    "synonyms": ["llave", "grifo", "llave de paso"],
+    "related": ["agua", "control", "tuberia", "flujo"],
+    "domain": "water",
+    "score": 100,
+    "project": "waterflow"
+  },
+  {
+    "word": "tuberia",
+    "synonyms": ["conducto", "caneria", "instalacion"],
+    "related": ["agua", "fuga", "mantenimiento", "sellado"],
+    "domain": "water",
+    "score": 85,
+    "project": "waterflow"
+  },
+  {
+    "word": "fugas",
+    "synonyms": ["fuga", "derrame", "goteo", "filtracion"],
+    "related": ["agua", "tuberia", "deteccion", "sensor"],
+    "domain": "water",
+    "score": 95,
+    "project": "waterflow"
+  },
+  {
+    "word": "mantenimiento",
+    "synonyms": ["servicio", "revision", "reparacion", "inspeccion"],
+    "related": ["prevencion", "costo", "tuberia", "sistema"],
+    "domain": "water",
+    "score": 80,
+    "project": "waterflow"
+  },
+  {
+    "word": "huella",
+    "synonyms": ["impacto", "emisiones", "indice"],
+    "related": ["carbono", "CO2", "sostenible", "ambiental"],
+    "domain": "sustainability",
+    "score": 100,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "carbono",
+    "synonyms": ["CO2", "dioxido", "emisiones"],
+    "related": ["huella", "impacto", "reduccion", "factor"],
+    "domain": "sustainability",
+    "score": 100,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "emisiones",
+    "synonyms": ["CO2", "gases", "contaminacion", "liberacion"],
+    "related": ["carbono", "huella", "transporte", "energia"],
+    "domain": "sustainability",
+    "score": 95,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "impacto",
+    "synonyms": ["efecto", "consecuencia", "influencia"],
+    "related": ["ambiental", "sostenible", "reduccion", "huella"],
+    "domain": "sustainability",
+    "score": 90,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "hidrica",
+    "synonyms": ["agua", "acuatica", "liquida"],
+    "related": ["consumo", "huella", "eficiencia", "responsable"],
+    "domain": "water",
+    "score": 95,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "consumo",
+    "synonyms": ["uso", "gasto", "utilizacion"],
+    "related": ["agua", "responsable", "eficiencia", "reduccion"],
+    "domain": "sustainability",
+    "score": 85,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "responsable",
+    "synonyms": ["consciente", "sostenible", "eficiente"],
+    "related": ["consumo", "estrategias", "reduccion", "practica"],
+    "domain": "sustainability",
+    "score": 80,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "gamificacion",
+    "synonyms": ["juegos", "ludificacion", "gaming"],
+    "related": ["misiones", "recompensas", "puntos", "niveles"],
+    "domain": "tech",
+    "score": 90,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "misiones",
+    "synonyms": ["retos", "desafios", "tareas", "objetivos"],
+    "related": ["juegos", "recompensas", "ecologicas", "sostenibilidad"],
+    "domain": "sustainability",
+    "score": 85,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "recompensas",
+    "synonyms": ["premios", "logros", "incentivos", "beneficios"],
+    "related": ["puntos", "niveles", "misiones", "motivacion"],
+    "domain": "tech",
+    "score": 80,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "puntos",
+    "synonyms": ["puntaje", "score", "calificacion"],
+    "related": ["niveles", "ranking", "progreso", "logros"],
+    "domain": "tech",
+    "score": 75,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "niveles",
+    "synonyms": ["grados", "etapas", "categorias"],
+    "related": ["puntos", "progreso", "ranking", "avance"],
+    "domain": "tech",
+    "score": 75,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "sostenibilidad",
+    "synonyms": ["sustentabilidad", "ecologia", "verde"],
+    "related": ["habitos", "familia", "educacion", "ambiental"],
+    "domain": "sustainability",
+    "score": 100,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "habitos",
+    "synonyms": ["rutinas", "costumbres", "practicas"],
+    "related": ["sostenibilidad", "familia", "motivacion", "cambio"],
+    "domain": "sustainability",
+    "score": 85,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "familia",
+    "synonyms": ["hogar", "casa", "domestico"],
+    "related": ["educacion", "actividad", "conciencia", "habitos"],
+    "domain": "sustainability",
+    "score": 80,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "educacion",
+    "synonyms": ["ensenanza", "aprendizaje", "formacion"],
+    "related": ["ambiental", "sostenibilidad", "familia", "conciencia"],
+    "domain": "sustainability",
+    "score": 85,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "dashboard",
+    "synonyms": ["panel", "tablero", "interfaz"],
+    "related": ["visualizacion", "KPIs", "graficos", "datos"],
+    "domain": "tech",
+    "score": 85,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "visualizacion",
+    "synonyms": ["graficos", "representacion", "display"],
+    "related": ["datos", "dashboard", "metricas", "reportes"],
+    "domain": "tech",
+    "score": 80,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "KPIs",
+    "synonyms": ["metricas", "indicadores", "estadisticas"],
+    "related": ["dashboard", "visualizacion", "datos", "monitoreo"],
+    "domain": "tech",
+    "score": 75,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "graficos",
+    "synonyms": ["charts", "diagramas", "visuales"],
+    "related": ["datos", "dashboard", "visualizacion", "reportes"],
+    "domain": "tech",
+    "score": 70,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "seguridad",
+    "synonyms": ["proteccion", "defensa", "salvaguarda"],
+    "related": ["iot", "cifrado", "autenticacion", "redes"],
+    "domain": "iot",
+    "score": 95,
+    "project": "waterflow"
+  },
+  {
+    "word": "cifrado",
+    "synonyms": ["encriptacion", "codificacion", "proteccion"],
+    "related": ["seguridad", "SSL", "TLS", "comunicacion"],
+    "domain": "iot",
+    "score": 90,
+    "project": "waterflow"
+  },
+  {
+    "word": "autenticacion",
+    "synonyms": ["verificacion", "validacion", "identificacion"],
+    "related": ["seguridad", "acceso", "usuario", "sistema"],
+    "domain": "iot",
+    "score": 85,
+    "project": "waterflow"
+  },
+  {
+    "word": "redes",
+    "synonyms": ["conectividad", "conexion", "infraestructura"],
+    "related": ["dispositivos", "seguridad", "iot", "comunicacion"],
+    "domain": "iot",
+    "score": 80,
+    "project": "waterflow"
+  },
+  {
+    "word": "chatbot",
+    "synonyms": ["bot", "asistente", "sistema"],
+    "related": ["busqueda", "respuesta", "algoritmo", "consulta"],
+    "domain": "tech",
+    "score": 85,
+    "project": null
+  },
+  {
+    "word": "busqueda",
+    "synonyms": ["search", "consulta", "query"],
+    "related": ["algoritmo", "ranking", "resultado", "sistema"],
+    "domain": "tech",
+    "score": 80,
+    "project": null
+  },
+  {
+    "word": "respuesta",
+    "synonyms": ["answer", "reply", "resultado"],
+    "related": ["consulta", "sistema", "procesamiento", "seleccion"],
+    "domain": "tech",
+    "score": 75,
+    "project": null
+  },
+  {
+    "word": "algoritmo",
+    "synonyms": ["metodo", "procedimiento", "logica"],
+    "related": ["ranking", "puntuacion", "busqueda", "sistema"],
+    "domain": "tech",
+    "score": 70,
+    "project": null
+  },
+  {
+    "word": "reduccion",
+    "synonyms": ["disminucion", "minimizacion", "ahorro"],
+    "related": ["huella", "emisiones", "consumo", "estrategias"],
+    "domain": "sustainability",
+    "score": 90,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "monitoreo",
+    "synonyms": ["seguimiento", "vigilancia", "control"],
+    "related": ["datos", "sensores", "tiempo real", "sistema"],
+    "domain": "iot",
+    "score": 85,
+    "project": null
+  },
+  {
+    "word": "prevencion",
+    "synonyms": ["profilaxis", "anticipacion", "evitar"],
+    "related": ["mantenimiento", "fugas", "danos", "cuidado"],
+    "domain": "water",
+    "score": 90,
+    "project": "waterflow"
+  },
+  {
+    "word": "eficiencia",
+    "synonyms": ["optimizacion", "rendimiento", "aprovechamiento"],
+    "related": ["consumo", "recursos", "ahorro", "mejora"],
+    "domain": "sustainability",
+    "score": 85,
+    "project": "cleanlyfe"
+  },
+  {
+    "word": "temperatura",
+    "synonyms": ["calor", "frio", "termica", "clima"],
+    "related": ["congelamiento", "sensor", "ambiente", "control"],
+    "domain": "iot",
+    "score": 80,
+    "project": "waterflow"
+  },
+  {
+    "word": "humedad",
+    "synonyms": ["moisture", "vapor", "agua"],
+    "related": ["sensor", "deteccion", "ambiente", "control"],
+    "domain": "iot",
+    "score": 80,
+    "project": "waterflow"
+  }
+]

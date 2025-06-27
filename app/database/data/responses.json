@@ -1,0 +1,478 @@
+[
+  {
+    "question_id": "leak_prevention_1",
+    "response_text": "Las fugas de agua en hogares tienen varias causas principales que WaterFlow está diseñado para detectar tempranamente. El envejecimiento de tuberías es la causa más común: con el tiempo, los materiales se degradan, especialmente en uniones y codos donde hay más estrés mecánico. Los cambios bruscos de temperatura, muy comunes en Chihuahua, causan expansión y contracción que debilita las conexiones y puede provocar grietas. La corrosión interna, especialmente en tuberías metálicas, crea puntos débiles que eventualmente fallan. También están las obstrucciones que aumentan la presión interna, y las instalaciones deficientes donde las conexiones no fueron selladas correctamente desde el inicio.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Cómo detecta WaterFlow estos problemas?", "¿Qué tubería dura más?", "¿Cada cuánto revisar las tuberías?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "leak_prevention_1",
+    "response_text": "El análisis de fallas en sistemas de plomería doméstica muestra patrones predecibles que los sensores de WaterFlow pueden identificar. La fatiga del material por ciclos térmicos representa aproximadamente el 40% de las fallas, especialmente en zonas con inviernos rigurosos. La corrosión electroquímica, acelerada por la calidad del agua local, constituye otro 25% de los casos. Las uniones mecánicas (roscas, soldaduras, empaques) fallan en un 20% debido a asentamiento estructural y vibraciones. El 15% restante corresponde a defectos de manufactura o instalación inadecuada. WaterFlow monitorea continuamente los patrones de flujo para detectar anomalías que preceden a estas fallas.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es la corrosión electroquímica?", "¿Cómo prevenir la fatiga térmica?", "¿WaterFlow predice cuándo va a fallar?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "leak_prevention_2",
+    "response_text": "WaterFlow utiliza un sistema multicapa de detección que combina varios tipos de sensores para identificar fugas con precisión excepcional. Los sensores de flujo miden constantemente el caudal de agua en tiempo real, detectando patrones anómalos como flujo continuo cuando no debería haberlo (indicando una fuga activa). Los sensores de humedad se colocan en puntos estratégicos cerca de tuberías y válvulas para detectar la presencia de agua donde no debería estar. El sistema también incluye sensores de presión que identifican caídas graduales que pueden indicar fugas pequeñas antes de que se vuelvan visibles. Toda esta información se procesa mediante algoritmos inteligentes que distinguen entre uso normal y anomalías reales.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Dónde se colocan los sensores?", "¿Puede dar falsos positivos?", "¿Qué tan rápido detecta una fuga?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "leak_prevention_2",
+    "response_text": "La arquitectura de detección de WaterFlow implementa un enfoque de sensor fusion que integra múltiples tecnologías de monitoreo. Los transductores de flujo ultrasónicos no invasivos miden el caudal sin restricciones al sistema, mientras que los sensores capacitivos de humedad proporcionan detección ambiental con sensibilidad ajustable. El sistema incluye acelerómetros que detectan vibraciones anómalas en tuberías que pueden preceder a fallas estructurales. Los algoritmos de machine learning procesan estos datos para establecer patrones de comportamiento normal y generar alertas predictivas antes de que ocurran fallas catastróficas, permitiendo mantenimiento preventivo efectivo.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es sensor fusion?", "¿Cómo aprende el sistema mi uso normal?", "¿Se puede ajustar la sensibilidad?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "remote_control_1",
+    "response_text": "La app de WaterFlow controla las válvulas mediante una comunicación segura en tiempo real que funciona de manera muy intuitiva. Cuando tocas un control en tu teléfono, la app envía una señal cifrada a través de internet hacia los servidores de WaterFlow, que inmediatamente retransmiten el comando a tu dispositivo doméstico. El sistema de válvulas motorizadas recibe la instrucción y ejecuta la acción (abrir, cerrar, o ajustar flujo) en cuestión de segundos. Durante todo el proceso, recibes confirmación visual en tu app del estado actual de cada válvula, incluyendo si está abierta, cerrada, o en proceso de cambio. El sistema también permite programar horarios automáticos y responde instantáneamente a situaciones de emergencia como detección de fugas.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Funciona sin internet?", "¿Qué pasa si se va la luz?", "¿Puedo controlar desde varios teléfonos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "remote_control_1",
+    "response_text": "El sistema de control remoto de WaterFlow implementa una arquitectura cliente-servidor con protocolos MQTT sobre TLS para garantizar comunicación segura y eficiente. La aplicación móvil establece una conexión persistente con el broker de mensajes en la nube, permitiendo control bidireccional en tiempo real. Los actuadores de válvula utilizan motores paso a paso con retroalimentación posicional, proporcionando control preciso y confirmación de estado. El sistema incluye un buffer de comandos locales que permite operación autónoma limitada durante interrupciones de conectividad, ejecutando rutinas preprogramadas y protocolos de seguridad incluso sin conexión a internet.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es MQTT?", "¿Cómo funciona el buffer local?", "¿Qué protocolos de seguridad usa?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "carbon_footprint_1",
+    "response_text": "CleanLyfe evalúa tu huella de carbono analizando las principales fuentes de emisiones en tu vida diaria de manera integral y personalizada. El sistema examina tu consumo de energía doméstica (electricidad, gas, calefacción), considerando el tipo de energía que usas y la eficiencia de tus electrodomésticos. También analiza tus patrones de transporte: kilómetros recorridos en auto, uso de transporte público, vuelos, y tipo de vehículo que conduces. Tu dieta es otro factor crucial: el sistema evalúa tu consumo de carne, productos lácteos, y alimentos procesados vs. locales. Finalmente, considera tus hábitos de consumo general como compras, reciclaje, y uso de productos desechables. Toda esta información se procesa usando factores de emisión actualizados para el contexto mexicano.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Cómo se calculan exactamente las emisiones?", "¿Qué factores pesan más?", "¿Cómo mejoro mi puntaje?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "carbon_footprint_1",
+    "response_text": "La metodología de cálculo de huella de carbono de CleanLyfe se basa en estándares internacionales del IPCC adaptados al contexto mexicano. El sistema evalúa emisiones directas (Scope 1) como combustibles fósiles utilizados directamente en el hogar, emisiones indirectas de energía (Scope 2) provenientes de la red eléctrica nacional, y otras emisiones indirectas (Scope 3) relacionadas con transporte, alimentación, y bienes de consumo. Para cada categoría, utiliza factores de emisión específicos de México proporcionados por INECC y organismos internacionales, considerando la matriz energética nacional que incluye un porcentaje significativo de energías renovables y combustibles fósiles.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué son los Scope 1, 2 y 3?", "¿Cada cuánto se actualizan los factores?", "¿Varía por región en México?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "water_footprint_1",
+    "response_text": "CleanLyfe distingue claramente entre los tres tipos de huella hídrica para darte una perspectiva completa de tu impacto en el agua. La huella hídrica azul representa el agua dulce que consumes directamente: la que sale de tu grifo, la que usas para bañarte, lavar ropa, regar el jardín, y toda el agua que extraes de ríos, lagos o acuíferos. La huella verde corresponde al agua de lluvia que se evapora durante la producción de los alimentos que consumes, especialmente importante en agricultura. Por ejemplo, cuando comes una manzana, consideramos toda el agua de lluvia que el árbol utilizó para crecer. La huella gris es quizás la más compleja: representa la cantidad de agua necesaria para diluir la contaminación generada por tus actividades hasta niveles aceptables según estándares ambientales.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Cuál es la más importante de reducir?", "¿Cómo calculo mi huella gris?", "¿Qué alimentos gastan más agua?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "water_footprint_1",
+    "response_text": "La clasificación de huella hídrica implementada en CleanLyfe sigue la metodología estándar del Water Footprint Network adaptada para usuarios mexicanos. La huella azul cuantifica el consumo de agua superficial y subterránea, medida volumétricamente con factores de escasez regional para reflejar el estrés hídrico local. La huella verde representa la evapotranspiración de agua de precipitación durante procesos productivos, calculada mediante modelos de balance hídrico específicos para cada cultivo y región climática. La huella gris utiliza un enfoque de dilución basado en la diferencia entre concentración de contaminantes y estándares de calidad ambiental, aplicando factores de caracterización para diferentes tipos de emisiones al agua.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es el factor de escasez regional?", "¿Cómo se mide la evapotranspiración?", "¿Qué contaminantes considera la huella gris?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "gamification_1",
+    "response_text": "CleanLyfe implementa gamificación creando una experiencia similar a un videojuego que hace que cuidar el medio ambiente sea divertido y adictivo. El sistema te asigna misiones ecológicas específicas como 'Reduce tu huella de carbono 10% esta semana' o 'Usa transporte público 3 veces'. Cada misión completada te otorga puntos de experiencia (XP) y desbloquea nuevos niveles con títulos como 'Guerrero Verde' o 'Maestro de la Sostenibilidad'. También incluye un sistema de logros especiales para hitos importantes, como alcanzar 30 días consecutivos de hábitos sostenibles. Las recompensas van desde badges virtuales hasta contenido educativo exclusivo, y puedes comparar tu progreso con otros usuarios manteniendo un elemento competitivo saludable que te motiva a seguir mejorando.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Qué tipos de misiones hay?", "¿Puedo competir con amigos?", "¿Hay recompensas reales?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "gamification_1",
+    "response_text": "La arquitectura de gamificación de CleanLyfe se fundamenta en principios de psicología conductual y teoría de autodeterminación para maximizar la motivación intrínseca hacia comportamientos sostenibles. El sistema implementa un modelo de progresión no lineal con múltiples rutas de avance, permitiendo que usuarios con diferentes perfiles (orientados a agua, energía, transporte) encuentren caminos de desarrollo personalizados. Los mecanismos de feedback inmediato incluyen notificaciones push contextuales, visualizaciones de progreso en tiempo real, y sistemas de refuerzo variable que mantienen el engagement a largo plazo. La plataforma utiliza algoritmos de dificultad adaptativa que ajustan automáticamente la complejidad de las misiones según el rendimiento histórico del usuario.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es la teoría de autodeterminación?", "¿Cómo funciona la dificultad adaptativa?", "¿Qué métricas miden el engagement?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "data_visualization_1",
+    "response_text": "El dashboard de CleanLyfe presenta métricas ambientales clave organizadas de manera intuitiva para que puedas entender fácilmente tu impacto ecológico. Las métricas principales incluyen tu huella de carbono total y desglosada por categorías (transporte, hogar, alimentación), tu huella hídrica con el detalle de consumo azul, verde y gris, y tu índice de sostenibilidad general que combina varios factores. También muestra tendencias temporales para que veas si estás mejorando mes a mes, comparaciones con promedios nacionales y regionales para darte contexto, y proyecciones de tu impacto anual basadas en tus hábitos actuales. El sistema incluye indicadores de progreso hacia tus metas personales y alertas cuando te desvías de tus objetivos de sostenibilidad.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Cómo se calcula el índice de sostenibilidad?", "¿Con qué me compara el sistema?", "¿Puedo personalizar el dashboard?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "data_visualization_1",
+    "response_text": "La interfaz de visualización de CleanLyfe implementa un sistema de KPIs ambientales basado en estándares internacionales de reporting de sostenibilidad como GRI y TCFD, adaptados para usuarios individuales. Los indicadores primarios incluyen emisiones de GEI expresadas en CO2 equivalente con desglose por alcance, consumo hídrico total y por tipología según metodología WFN, y métricas de circularidad basadas en el Material Footprint. El dashboard incorpora análisis de tendencias utilizando moving averages y regression analysis para identificar patrones significativos, benchmarking estadístico contra cohortes demográficas similares, y modelos predictivos que proyectan el cumplimiento de objetivos de reducción utilizando técnicas de time series forecasting.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué son los estándares GRI y TCFD?", "¿Cómo funciona el Material Footprint?", "¿Qué algoritmos usa para las predicciones?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "eco_education_1",
+    "response_text": "CleanLyfe ofrece contenidos educativos diseñados específicamente para hacer que toda la familia participe en la sostenibilidad de manera divertida y práctica. Los módulos incluyen actividades interactivas para niños como juegos sobre reciclaje, experimentos simples para entender el ciclo del agua, y retos familiares como 'semanas sin plástico' que involucran a todos. Para padres, hay guías prácticas sobre cómo enseñar conceptos ambientales en casa, recetas de productos de limpieza ecológicos, y consejos para hacer compras más sostenibles. El sistema también incluye un calendario de actividades estacionales que aprovecha fechas especiales como el Día de la Tierra para crear momentos de aprendizaje natural, y recursos descargables como hojas de trabajo y proyectos de ciencias ambientales adaptados a diferentes edades.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Hay actividades para diferentes edades?", "¿Puedo descargar material imprimible?", "¿Cómo motivo a mis hijos a participar?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "eco_education_1",
+    "response_text": "El módulo educativo de CleanLyfe implementa un enfoque de aprendizaje constructivista que combina teoría pedagógica con gamificación para maximizar la retención de conocimientos ambientales. Los contenidos están estructurados siguiendo taxonomías de aprendizaje como la de Bloom, progresando desde conocimiento básico hasta aplicación práctica y evaluación crítica. La plataforma incluye simulaciones interactivas basadas en system dynamics que permiten a los usuarios explorar las consecuencias de diferentes decisiones ambientales, módulos de realidad aumentada para visualizar impactos ambientales invisibles, y sistemas de assessment formativo que adaptan el contenido según el progreso individual de aprendizaje de cada miembro de la familia.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es system dynamics?", "¿Cómo funciona la realidad aumentada en la app?", "¿Qué es assessment formativo?"],
+    "usage_count": 0
+  },
+
+  {
+    "question_id": "chatbot_info_1",
+    "response_text": "Mi sistema de búsqueda funciona mediante un proceso inteligente de análisis y puntuación que me permite encontrar la respuesta más relevante para tu consulta. Primero, analizo tu pregunta identificando las palabras clave principales y las normalizo para manejar variaciones como plurales o sinónimos. Luego busco en mi base de conocimientos estructurada todas las preguntas que contienen esas palabras clave o términos relacionados. A cada coincidencia le asigno una puntuación basada en factores como la relevancia de las palabras clave, si la pregunta pertenece al proyecto correcto (WaterFlow o CleanLyfe), y qué tan bien coincide el contexto general. Finalmente, selecciono la pregunta con la puntuación más alta y elijo una de las respuestas disponibles, rotándolas para mantener variedad en nuestras conversaciones.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Puedes aprender de nuestras conversaciones?", "¿Qué hago si no entiendes mi pregunta?", "¿Cómo expandes los sinónimos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "chatbot_info_1",
+    "response_text": "Mi arquitectura de búsqueda implementa un algoritmo de ranking basado en scoring multi-dimensional que optimiza la relevancia de respuestas. El proceso comienza con tokenización y normalización lingüística de la query del usuario, seguido de expansión semántica utilizando diccionarios de sinónimos específicos del dominio IoT y sostenibilidad. La puntuación se calcula mediante una función ponderada que considera: term frequency-inverse document frequency (TF-IDF) para relevancia léxica, boosting por contexto de proyecto, y factores de confianza específicos por pregunta. El sistema implementa rotation scheduling para respuestas múltiples, manteniendo un usage counter que garantiza distribución equitativa de variantes de respuesta y previene repetición excesiva en sesiones prolongadas.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es TF-IDF?", "¿Cómo funciona el boosting por contexto?", "¿Puedes explicar el rotation scheduling?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_1",
+    "response_text": "WaterFlow recomienda un enfoque preventivo multicapa para proteger tu hogar contra fugas y daños por agua. La primera línea de defensa es la inspección regular: revisa visualmente las tuberías expuestas mensualmente, especialmente en conexiones y codos donde suelen aparecer las primeras señales de desgaste. Durante el invierno en Chihuahua, es crucial mantener un goteo mínimo en grifos durante las noches más frías para evitar congelamiento, y asegurarte de que las tuberías en áreas no calefaccionadas estén aisladas adecuadamente. WaterFlow también sugiere conocer la ubicación de tu llave de paso principal para poder cerrarla rápidamente en emergencias, y mantener los números de contacto de plomeros confiables siempre a mano. El sistema mismo complementa estas prácticas con monitoreo 24/7 y alertas tempranas que te dan tiempo de actuar antes de que un problema menor se convierta en un desastre costoso.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 25,
+    "follow_up": ["¿Qué señales debo buscar en las inspecciones?", "¿Cómo aislo tuberías correctamente?", "¿Cuándo debo llamar a un profesional?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_2",
+    "response_text": "CleanLyfe te ofrece acciones prácticas para reducir tu huella de carbono en tu día a día. Por ejemplo, sugiere utilizar transporte compartido o bicicleta para trayectos cortos, preferir electrodomésticos de alta eficiencia energética con certificaciones como ENERGY STAR, y optar por alimentos locales y de temporada para minimizar las emisiones del transporte. También recomienda reducir el consumo de carne roja y procesada, sustituyéndola por proteínas vegetales, y disminuir la cantidad de residuos plásticos usando envases reutilizables. Cada una de estas acciones aparece en tu lista de misiones, asignando puntos según el impacto estimado.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 22,
+    "follow_up": ["¿Dónde veo el impacto de cada acción?", "¿Puedo sugerir nuevas misiones?", "¿Cómo registro viajes en bicicleta?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_2",
+    "response_text": "La guía de recomendaciones de CleanLyfe emplea modelos de optimización multicriterio para priorizar acciones según su relación coste-beneficio en reducción de emisiones. El sistema analiza tus datos de uso energético y de transporte utilizando algoritmos de programación lineal para identificar el conjunto óptimo de medidas: por ejemplo, la sustitución de bombillas incandescentes por LEDs de bajo consumo, actualización de refrigeradores a modelos A+++, y planificación de rutas de viaje que minimicen kilómetros. Además, incorpora análisis de ciclo de vida (LCA) para evaluar emisiones indirectas asociadas a la producción y transporte de productos, y te propone acciones con mayor retorno ambiental.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Qué es programación lineal en este contexto?", "¿Cómo calcula el LCA?", "¿Se actualizan las recomendaciones según nuevos datos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_3",
+    "response_text": "Para optimizar tu consumo de agua en casa, CleanLyfe sugiere instalar aireadores en los grifos y cabezales de ducha de bajo flujo para reducir el caudal sin perder confort. También recomienda reparar goteos y fugas tan pronto como aparezcan, y programar actividades de riego en horarios de menor evaporación (temprano en la mañana o al atardecer). Otra buena práctica es reutilizar agua de lluvia recolectada para limpieza de exteriores o descarga de WC, y emplear electrodomésticos como lavadoras solo con carga completa.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 21,
+    "follow_up": ["¿Dónde obtengo aireadores para grifos?", "¿Cómo recolecto agua de lluvia correctamente?", "¿Cada cuánto revisar fugas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_3",
+    "response_text": "CleanLyfe utiliza análisis de eficiencia hídrica basado en indicadores de huella hídrica para generar un plan de ahorro personalizado. Aplica factores de consumo por actividad (ducha, lavado de ropa, riego) y optimiza el scheduling de dispositivos mediante algoritmos de series temporales para identificar patrones de uso pico. A nivel avanzado, propone la integración de sistemas de recolección de agua pluvial con bombas de baja energía y control automático de válvulas, gestionando válvulas motorizadas para distribuir el agua reutilizada según demanda.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 17,
+    "follow_up": ["¿Qué es forecasting de series temporales aplicado al agua?", "¿Cómo funciona la recolección automatizada?", "¿Se puede integrar con otros sistemas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_4",
+    "response_text": "WaterFlow recomienda mantener tu infraestructura IoT segura siguiendo prácticas sencillas: crea una red Wi-Fi separada para dispositivos inteligentes, actualiza el firmware de tus equipos tan pronto como haya nuevas versiones, y utiliza contraseñas robustas y únicas para cada dispositivo. Además, desactiva servicios innecesarios (como WPS) en tu router y configura alertas de acceso para saber si un nuevo dispositivo intenta conectarse. Estas prácticas minimizan riesgos sin requerir conocimientos técnicos avanzados.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 23,
+    "follow_up": ["¿Cómo creo una red separada en mi router?", "¿Dónde encuentro actualizaciones de firmware?", "¿Qué es WPS?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_4",
+    "response_text": "Para garantizar la ciberseguridad en tu ecosistema IoT, WaterFlow implementa principios de defense-in-depth: segmentación de red mediante VLANs, autenticación de dos factores para la app móvil, y algoritmos de detección de anomalías que monitorizan patrones de tráfico. Además, el sistema aplica parches automáticos a nivel de firmware mediante un mecanismo de OTA seguro con rollback automático si la nueva versión falla. Estas medidas combinan hardware y software para proporcionar una postura de seguridad robusta.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 19,
+    "follow_up": ["¿Qué es defense-in-depth?", "¿Cómo funciona el OTA seguro?", "¿Qué algoritmos usan para detección de anomalías?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_5",
+    "response_text": "El chatbot te sugiere hábitos sencillos para una vida más sostenible: apaga las luces cuando no las uses, desconecta cargadores y electrodomésticos en stand-by, reutiliza y recicla correctamente los residuos domésticos, y planifica tus compras para reducir el desperdicio de alimentos. También recomienda usar bolsas de tela, evitar productos de un solo uso y elegir rutas de transporte más eficientes. Pequeñas acciones diarias pueden sumarse para generar un gran impacto.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo me recuerda el chatbot estas acciones?", "¿Puedo agregar mis propios recordatorios?", "¿Qué productos de un solo uso debo evitar?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_5",
+    "response_text": "La generación de recomendaciones del chatbot se basa en un motor de reglas y scoring dinámico que evalúa tu perfil y hábitos registrados. Utiliza un algoritmo de multi-armed bandit para balancear exploración y explotación de diferentes consejos, adaptando las sugerencias según tu respuesta a misiones previas. Las reglas incorporan criterios de impacto ambiental cuantificado, factibilidad de implementación y coste aproximado, priorizando aquellas acciones que maximicen la relación beneficio-coste tanto para el usuario como para el planeta.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Qué es multi-armed bandit?", "¿Cómo mide el chatbot la factibilidad?", "¿Puedo ajustar el nivel de dificultad de las recomendaciones?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "iot_home_3",
+    "response_text": "Los protocolos comunes en IoT doméstico incluyen MQTT para mensajería ligera y eficiente, HTTP/HTTPS para comunicación REST, y CoAP para dispositivos con recursos limitados. MQTT es ideal para actualización en tiempo real con bajo consumo, mientras que CoAP ofrece un modelo similar a HTTP pero optimizado para IoT. La elección depende de requerimientos de latencia, seguridad y recursos del dispositivo.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué protocolo es más seguro?", "¿Cómo implemento MQTT?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "iot_home_4",
+    "response_text": "La interoperabilidad se garantiza mediante estándares como MQTT, OPC UA o protocolos de capa de aplicación basados en JSON/REST, además de frameworks de integración como Home Assistant o Node-RED. WaterFlow emplea un broker MQTT con topics estandarizados y un esquema JSON común para todos los dispositivos, permitiendo que cualquier plataforma compatible pueda suscribirse y publicar comandos.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es OPC UA?", "¿Puedo conectar dispositivos de otro fabricante?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "leak_prevention_3",
+    "response_text": "La temperatura ambiente afecta directamente el riesgo de congelamiento: a temperaturas por debajo de 4 °C el agua en tuberías puede empezar a congelarse y expandirse, lo que genera presión interna y grietas. WaterFlow monitorea la temperatura con sensores externos e internos y envía alertas antes de que ocurra congelamiento, permitiéndote tomar medidas preventivas como aislamiento térmico o goteo controlado.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo configuro el límite de temperatura?", "¿Qué aislamiento recomiendas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "leak_prevention_4",
+    "response_text": "Entre las medidas preventivas para invierno destacan: aislar tuberías expuestas con cintas térmicas, mantener una pequeña apertura en grifos para goteo controlado, y programar el sistema para aumentar la temperatura interior si detecta riesgo de congelamiento. Además, WaterFlow sugiere revisar sellos y uniones antes de la temporada fría y habilitar alertas tempranas en la app.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué tipo de cinta térmica usar?", "¿Puedo automatizar el goteo?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "remote_control_2",
+    "response_text": "WaterFlow envía alertas push, SMS y correos electrónicos según tu configuración. Las notificaciones incluyen fugas detectadas, cambios de estado de válvulas, alertas de temperatura crítica, y recordatorios de mantenimiento. Puedes personalizar el canal y la prioridad de cada tipo de alerta desde la app.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo activo SMS?", "¿Puedo silenciar algunas alertas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "remote_control_3",
+    "response_text": "Para configurar rutinas, ingresa a la sección 'Automatización' en la app, selecciona el dispositivo y define horarios o condiciones (por ejemplo, cerrar válvula a las 22:00 o abrir si la humedad supera cierto nivel). Puedes combinar disparadores y acciones para crear rutinas complejas.",
+    "response_type": "steps",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Puedo usar variables en las rutinas?", "¿Cómo veo mis rutinas activas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "remote_control_4",
+    "response_text": "La interfaz incluye tamaños de fuente ampliados, contrastes altos, botones grandes y descripciones auditivas opcionales. También hay un modo simplificado con menos opciones en pantalla y guías paso a paso, pensado para usuarios con movilidad o visión reducida.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo activo el modo simplificado?", "¿Hay tutorial integrado?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "carbon_footprint_2",
+    "response_text": "Tras el cálculo, CleanLyfe muestra tu huella en toneladas de CO₂ equivalente, desglosada por categoría. La app usa gráficos de barras y pastel para representar energía, transporte y dieta. Además, ofrece un semáforo de impacto (verde, amarillo, rojo) según comparativa con promedios nacionales.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo mejoro mi semáforo?", "¿Dónde veo el desglose detallado?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "carbon_footprint_3",
+    "response_text": "CleanLyfe considera factores como el tipo de combustible (gasolina, diésel, eléctrico), eficiencia del vehículo (km/l o km/kWh), y distancia recorrida. Usa tablas de conversión oficiales de INECC para calcular kgCO₂/km y multiplica por kilómetros registrados.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Puedo agregar tipos de transporte no listados?", "¿Cómo registro los viajes?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "carbon_footprint_4",
+    "response_text": "Entre las estrategias están: mejorar el aislamiento térmico de tu hogar, cambiar a iluminación LED, usar transporte público o compartido, instalar paneles solares y adoptar dietas basadas en plantas. CleanLyfe te guía paso a paso y calcula el potencial ahorro de CO₂ por cada acción.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué ahorro obtengo con paneles solares?", "¿Cómo mido el impacto de mi dieta?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "water_footprint_2",
+    "response_text": "Para reducir consumo, CleanLyfe sugiere tomar duchas de menos de 5 minutos, recolectar agua de lluvia para el jardín, instalar inodoros de doble descarga y ajustar la lavadora solo con carga completa. Cada sugerencia viene con estimación de litros ahorrados.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo registro el ahorro?", "¿Puedo ajustar metas diarias?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "water_footprint_3",
+    "response_text": "El consumo indirecto se estima utilizando bases de datos de LCA que asocian volúmenes de agua promedio por unidad de alimento o producto. Por ejemplo, un kilo de carne vacuna puede representar 15 000 L de huella hídrica verde y gris. CleanLyfe incorpora estas tablas para calcular tu huella indirecta automáticamente.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Puedo ajustar los valores LCA?", "¿Qué base usa la app?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "water_footprint_4",
+    "response_text": "El dashboard muestra el total de huella hídrica y su desglose en azul, verde y gris, más métricas como litros por día y comparativa con recomendaciones de la ONU. Incluye gráficos de tendencia y alertas cuando superas tus metas semanales.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo ajusto mis metas?", "¿Puedo exportar datos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "gamification_2",
+    "response_text": "Al completar retos, recibes badges digitales, puntos XP y acceso a contenido exclusivo (tutoriales, webinars). También hay recompensas físicas ocasionales, como descuentos en tiendas ecológicas asociadas.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo canjeo descuentos?", "¿Cómo veo mis badges?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "gamification_3",
+    "response_text": "El sistema asigna puntos por cada reto completado y suma experiencia. Al alcanzar umbrales, subes de nivel y desbloqueas nuevos tipos de misiones. Tu perfil muestra nivel actual, XP acumulada y progreso hacia el siguiente nivel.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué XP obtengo por cada misión?", "¿Puedo comparar niveles con amigos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "gamification_4",
+    "response_text": "Elementos como feedback inmediato, refuerzo variable (recompensas aleatorias) y metas claras aumentan retención. También usar narrativas y desafíos sociales (compartir logros) fomenta el compromiso.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo comparto logros?", "¿Qué es refuerzo variable?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "data_visualization_2",
+    "response_text": "Puedes usar filtros por fechas, categorías (agua, energía, transporte) y comparaciones con usuarios similares. También hay opciones de exportar CSV y personalizar ejes de tus gráficos.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo guardo mis filtros?", "¿Puedo crear reportes automáticos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "data_visualization_3",
+    "response_text": "CleanLyfe usa gráficos de líneas para tendencias temporales, barras para comparación de categorías y mapas de calor para consumo horario. También incluye diagramas circulares para proporciones.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Puedo cambiar el tipo de gráfico?", "¿Cómo interpreto el mapa de calor?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "data_visualization_4",
+    "response_text": "Los datos se actualizan en tiempo real usando WebSockets y llamadas API periódicas. Verás cambios instantáneos en tus gráficos cuando registras nueva información o completas misiones.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo funcionan los WebSockets?", "¿Puedo ajustar frecuencia de actualización?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "eco_education_2",
+    "response_text": "Las actividades se diseñan en pasos simples con materiales comunes del hogar. Inician con explicación teórica breve, seguida de un experimento práctico (ej. medir filtración de agua), y terminan con reflexión guiada y preguntas para la familia.",
+    "response_type": "steps",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Dónde encuentro materiales?", "¿Puedo sugerir actividades?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "eco_education_3",
+    "response_text": "Incluye quizzes interactivos, juegos de arrastrar y soltar sobre ciclos naturales, videos explicativos y simulaciones donde manipulas variables ambientales para ver resultados.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo accedo a los quizzes?", "¿Puedo descargar videos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "eco_education_4",
+    "response_text": "Se mide a través de cuestionarios antes y después de actividades, tiempo de participación, y puntos ganados en misiones educativas. CleanLyfe genera un informe de progreso y recomienda refuerzos si detecta bajo compromiso.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Dónde veo mi informe?", "¿Cómo aumento mi participación?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "chatbot_info_2",
+    "response_text": "El sistema usa heurísticas TF-IDF para relevancia léxica, boosting por proyecto, y un factor de freshness basado en usage_count. También incorpora sinónimos del diccionario interno para expandir consultas.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué significa freshness?", "¿Cómo afecta el usage_count?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "chatbot_info_3",
+    "response_text": "Para rotación, el chatbot lleva un contador de usos y selecciona la respuesta con menor usage_count, incrementándolo al usarla. Así asegura variedad antes de repetir una variante.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Puedo resetear usage_count?", "¿Cómo influye en la selección?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "chatbot_info_4",
+    "response_text": "La base estructurada no puede generar contenido nuevo más allá de lo documentado. Tampoco maneja contexto de conversación extenso y depende de coincidencias de keywords, por lo que puede fallar con consultas muy abiertas.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cómo mejoro mis consultas?", "¿Qué temas faltan en la base?"],
+    "usage_count": 0
+  }
+]

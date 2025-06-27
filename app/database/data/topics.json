@@ -1,0 +1,83 @@
+[
+  {
+    "topic_id": "leak_prevention",
+    "name": "Prevención de fugas y mantenimiento doméstico",
+    "description": "Detección de fugas, mantenimiento y costos de daños por agua",
+    "keywords": ["fugas", "mantenimiento", "agua", "tubería"],
+    "projects": ["waterflow"],
+    "icon": "💧",
+    "priority": 9
+  },
+  {
+    "topic_id": "remote_control",
+    "name": "Sistemas de monitoreo y control remoto",
+    "description": "Control de dispositivos IoT desde apps móviles",
+    "keywords": ["control", "remoto", "app", "notificaciones", "automatización"],
+    "projects": ["waterflow"],
+    "icon": "📱",
+    "priority": 7
+  },
+  {
+    "topic_id": "carbon_footprint",
+    "name": "Huella de carbono",
+    "description": "Cálculo e impacto ambiental de las emisiones de carbono",
+    "keywords": ["huella", "carbono", "emisiones", "co2", "impacto"],
+    "projects": ["cleanlyfe"],
+    "icon": "🌿",
+    "priority": 9
+  },
+  {
+    "topic_id": "water_footprint",
+    "name": "Huella hídrica y consumo responsable",
+    "description": "Uso eficiente del agua y su impacto ambiental",
+    "keywords": ["agua", "huella", "hídrica", "consumo", "hogar"],
+    "projects": ["cleanlyfe"],
+    "icon": "💧",
+    "priority": 8
+  },
+  {
+    "topic_id": "gamification",
+    "name": "Gamificación para la sostenibilidad",
+    "description": "Uso de juegos y misiones para promover hábitos sostenibles",
+    "keywords": ["juegos", "misiones", "recompensas", "niveles"],
+    "projects": ["cleanlyfe"],
+    "icon": "🎮",
+    "priority": 7
+  },
+  {
+    "topic_id": "data_visualization",
+    "name": "Visualización de datos ambientales",
+    "description": "Interpretación de dashboards ecológicos y KPIs",
+    "keywords": ["dashboard", "visualización", "KPIs", "métricas"],
+    "projects": ["cleanlyfe"],
+    "icon": "📊",
+    "priority": 6
+  },
+  {
+    "topic_id": "eco_education",
+    "name": "Educación ambiental práctica",
+    "description": "Hábitos sostenibles y aprendizaje familiar",
+    "keywords": ["sostenibilidad", "familia", "educación", "hábitos"],
+    "projects": ["cleanlyfe"],
+    "icon": "👨‍👩‍👧‍👦",
+    "priority": 7
+  },
+  {
+    "topic_id": "chatbot_info",
+    "name": "Funcionamiento del chatbot",
+    "description": "Cómo funciona el sistema de búsqueda y respuesta del chatbot",
+    "keywords": ["chatbot", "búsqueda", "respuesta", "sistema"],
+    "projects": ["waterflow", "cleanlyfe"],
+    "icon": "🗃️",
+    "priority": 5
+  },
+  {
+    "topic_id": "recommendations",
+    "name": "Recomendaciones",
+    "description": "Sugerencias y buenas prácticas para optimizar el uso de WaterFlow y CleanLyfe",
+    "keywords": ["recomendaciones", "consejos", "mejores prácticas", "optimización"],
+    "projects": ["waterflow", "cleanlyfe"],
+    "icon": "💡",
+    "priority": 9
+  }
+]
