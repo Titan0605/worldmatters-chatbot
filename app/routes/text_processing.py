@@ -1,7 +1,8 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from loguru import logger
+import random
 
-from app.models import KeywordsModel
+from app.models import KeywordsModel, ResponsesModel
 from app.services.text_processor import get_keywords
 from app.services.question_score import search_relevant_questions
 from app.utils.formatting import format_search_results
@@ -18,6 +19,7 @@ def send_text():
         JSON: With the result or an error message.
     """
     kw_model = KeywordsModel()
+    resp_model = ResponsesModel()
     try:
         data = request.get_json()
         if not data:
@@ -63,8 +65,47 @@ def send_text():
             formatted_questions = []
 
         route_logger.info(f"Top questions: {formatted_questions}")
+        
+        response_data = {
+            "status": "success",
+            "message": "Text successfully received",
+            "result": result
+        }
 
-        return jsonify({"status": "success", "message": "Text successfully received", "result": result}), 200
+        # Check if we have at least two questions to compare
+        if len(formatted_questions) >= 2:
+            score_diff = abs(formatted_questions[0]['score'] - formatted_questions[1]['score'])
+            
+            if score_diff < 100:
+                # Case: Ambiguous question
+                top_3_questions = formatted_questions[:3]
+                response_data.update({
+                    "ambiguous": True,
+                    "message": "No estoy seguro de qué exactamente quieres saber. ¿Podrías ser más específico?",
+                    "suggestions": top_3_questions
+                })
+            else:
+                # Case: Clear winner
+                top_question = formatted_questions[0]
+                try:
+                    # Get responses for the top question
+                    responses = resp_model.get_responses(top_question['question_id'])
+                    if responses:
+                        chosen_response = random.choice(responses)
+                        response_data.update({
+                            "ambiguous": False,
+                            "response": chosen_response,
+                            "question": top_question
+                        })
+                    else:
+                        response_data["message"] = "No se encontraron respuestas para esta pregunta"
+                except Exception as e:
+                    route_logger.error(f"Error getting responses: {e}")
+                    response_data["message"] = "Error al obtener la respuesta"
+        else:
+            response_data["message"] = "No se encontraron preguntas relacionadas"
+
+        return jsonify(response_data), 200
 
     except ValueError as ve:
         route_logger.error(f"Value error: {ve}")

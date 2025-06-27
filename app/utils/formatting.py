@@ -18,6 +18,7 @@ def format_search_results(search_results) -> list:
             'question': result['question'],
             'project': result['project'].upper(),
             'topic': result['topic_id'],
+            'question_id': result['question_id'],
             'score': round(result['final_score'], 2),
             'matches': result['matched_terms'],
             'match_breakdown': {
