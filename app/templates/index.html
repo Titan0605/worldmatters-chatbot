@@ -1,10 +1,11 @@
 {%extends '/layouts/base.html' %} {% block main %}
 
-<div class="max-w-5xl lg:min-w-5xl h-full flex flex-col">
+<div class="w-full lg:min-w-5xl h-full flex flex-col">
   <div class="flex-1 min-h-0 w-full flex flex-col">
     <!-- Main Chat -->
-    <div class="lg:col-span-3 flex flex-col h-full min-h-0 flex-1">
-      <div class="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col flex-1 min-h-0">
+    <div class="flex h-full min-h-0 flex-1 gap-2">
+      <!-- Mensajes (75%) -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col min-h-0 flex-1 w-full lg:w-3/4">
         <!-- Chat Header -->
         <div class="p-4 border-b border-gray-100 flex items-center justify-between flex-shrink-0">
           <div class="flex items-center space-x-3">
@@ -19,11 +20,6 @@
               </p>
             </div>
           </div>
-          <div class="flex items-center space-x-2">
-            <button class="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg cursor-pointer">
-              <i class="fa-regular fa-trash-can text-xl"></i>
-            </button>
-          </div>
         </div>
 
         <!-- Messages y input -->
@@ -36,13 +32,16 @@
                 <i class="fa-solid fa-robot text-white"></i>
               </div>
               <div class="bg-gray-50 rounded-lg rounded-tl-none p-3 max-w-md">
-                <p class="text-gray-800">¡Hola! Soy tu asistente educativo. Puedo ayudarte con preguntas sobre matemáticas, física, química, historia y literatura. ¿En qué puedo ayudarte hoy?</p>
+                <p class="text-gray-800">
+                  ¡Hola! Soy tu asistente para los proyectos WaterFlow y CleanLyfe. ¿Te interesa conocer sobre cómo reducir tu huella ecológica? Puedo explicarte
+                  el funcionamiento de las apps, métricas ambientales y recomendaciones prácticas. ¿En qué puedo ayudarte hoy?
+                </p>
                 <span class="text-xs text-gray-500 mt-1 block">Ahora</span>
               </div>
             </div>
           </div>
           <!-- Input Area -->
-          <div class="border-t border-gray-100 p-4 flex-shrink-0 bg-white z-10">
+          <div class="border-t border-gray-100 p-4 flex-shrink-0 bg-white z-10 rounded-xl">
             <!-- Main Input -->
             <div class="flex items-end space-x-3">
               <textarea
@@ -57,7 +56,7 @@
             </div>
 
             <!-- System State -->
-            <div class="mt-2 flex items-center justify-between text-xs text-gray-500">
+            <div class="mt-2 flex items-center justify-between text-xs text-gray-500 rounded-xl">
               <span class="hidden sm:inline">Presiona Enter para enviar, Shift+Enter para nueva línea</span>
               <span class="sm:hidden">Toca para enviar</span>
               <div class="flex items-center space-x-4">
@@ -70,29 +69,14 @@
           </div>
         </div>
       </div>
-
-      <!-- Sidebar -->
-      <!-- <div class="hidden lg:block">
-      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 h-full">
-        <h3 class="font-semibold text-gray-900 mb-4">Historial de Conversaciones</h3>
-        <div class="space-y-2">
-          <div class="p-2 bg-blue-50 rounded-lg border-l-4 border-blue-400">
-            <p class="text-sm font-medium text-gray-900">Teorema de Pitágoras</p>
-            <p class="text-xs text-gray-500">Hace 5 min</p>
-          </div>
-          <div class="p-2 bg-gray-50 rounded-lg">
-            <p class="text-sm font-medium text-gray-900">Ecuaciones cuadráticas</p>
-            <p class="text-xs text-gray-500">Ayer</p>
-          </div>
-          <div class="p-2 bg-gray-50 rounded-lg">
-            <p class="text-sm font-medium text-gray-900">Revolución Francesa</p>
-            <p class="text-xs text-gray-500">Hace 2 días</p>
-          </div>
+      <!-- Sidebar (25%) -->
+      <div class="hidden lg:flex flex-col min-h-0 w-1/4">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 h-full flex flex-col flex-1 min-h-0">
+          <h3 class="font-semibold text-gray-900 mb-4">Historial de Preguntas</h3>
+          <div id="history-logs" class="space-y-2 flex-1 min-h-0 overflow-y-auto"></div>
         </div>
       </div>
-    </div> -->
     </div>
   </div>
-
-  {% endblock %}
 </div>
+{% endblock %}

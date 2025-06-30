@@ -178,6 +178,40 @@ function proccessQuestion(questionText) {
       scrollToBottom();
     });
 
+  fetch("/history", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.status === "success" && data.history) {
+        const historyContainer = document.getElementById("history-logs");
+        historyContainer.innerHTML = "";
+
+        data.history.forEach((item) => {
+          const newLog = document.createElement("div");
+          newLog.className = "mb-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors shadow-sm";
+          newLog.innerHTML = `
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-sm font-semibold text-blue-600">${item.topic || "Sin tema"}</h4>
+              <span class="text-xs text-gray-500">${item.time || "Ahora"}</span>
+            </div>
+            <div class="space-y-2">
+              <p class="text-sm text-gray-800"><span class="font-medium">Pregunta:</span> ${item.question}</p>
+              <p class="text-sm text-gray-700"><span class="font-medium">Respuesta:</span> ${item.response}</p>
+            </div>
+          `;
+          historyContainer.appendChild(newLog);
+        });
+      } else {
+        console.error("Error fetching history:", data);
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading history:", error);
+    });
+
   textarea.value = "";
   textarea.style.height = "auto";
 }

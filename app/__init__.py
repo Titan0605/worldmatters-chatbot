@@ -6,7 +6,7 @@ from loguru import logger
 from app.database.connection import init_db
 from app.utils.db import save_db_for_utils
 from app.utils.logger import setup_logger
-from app.routes import index, text_processing
+from app.routes import index, text_processing, history
 
 setup_logger()
 app_logger = logger.bind(name="app")
@@ -33,6 +33,7 @@ def app_init() -> Flask:
         
         app.register_blueprint(index.bp)
         app.register_blueprint(text_processing.bp)
+        app.register_blueprint(history.bp)
     except (ConnectionFailure, ValueError) as e:
         app_logger.error(f"Failed to initialize database: {e}")
         raise

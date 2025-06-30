@@ -1,4 +1,7 @@
 from loguru import logger
+from app.models import TopicModel
+
+topic_model = TopicModel()
 
 formatting_logger = logger.bind(name=__name__)
 
@@ -17,7 +20,7 @@ def format_search_results(search_results) -> list:
             'rank': i,
             'question': result['question'],
             'project': result['project'].upper(),
-            'topic': result['topic_id'],
+            'topic': topic_model.get_topic_by_id(result['topic_id']),
             'question_id': result['question_id'],
             'score': round(result['final_score'], 2),
             'matches': result['matched_terms'],

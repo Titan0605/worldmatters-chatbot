@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify, render_template
 from loguru import logger
 import random
 
-from app.models import KeywordsModel, ResponsesModel
+from app.models import KeywordsModel, ResponsesModel, HistoryModel
 from app.services.text_processor import get_keywords
 from app.services.question_score import search_relevant_questions
 from app.utils.formatting import format_search_results
@@ -20,6 +20,7 @@ def send_text():
     """
     kw_model = KeywordsModel()
     resp_model = ResponsesModel()
+    history_model = HistoryModel()
     try:
         data = request.get_json()
         if not data:
@@ -89,6 +90,8 @@ def send_text():
                         "response": chosen_response,
                         "question": exact_match
                     })
+                    
+                    history_model.new_log(exact_match, chosen_response['response_text'])
                 else:
                     response_data["message"] = "No se encontraron respuestas para esta pregunta"
             except Exception as e:
@@ -118,6 +121,8 @@ def send_text():
                             "response": chosen_response,
                             "question": top_question
                         })
+                        
+                        history_model.new_log(top_question, chosen_response['response_text'])
                     else:
                         response_data["message"] = "No se encontraron respuestas para esta pregunta"
                 except Exception as e:
