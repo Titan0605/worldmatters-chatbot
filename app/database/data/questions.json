@@ -368,5 +368,85 @@
     "project": "both",
     "difficulty": "basic",
     "weight": 85
+  },
+  {
+    "question_id": "recommendations_6",
+    "topic_id": "recommendations",
+    "question": "¿Qué actividades de transporte sugiere CleanLyfe para reducir las emisiones de CO₂?",
+    "keywords": ["transporte", "actividad", "sugerir", "cleanlyfe", "reducir", "emisiones", "co2", "carbono"],
+    "synonyms": ["movilidad", "vehiculo", "tarea", "recomendar", "disminuir", "gases", "contaminacion", "huella"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 89
+  },
+  {
+    "question_id": "recommendations_7",
+    "topic_id": "recommendations",
+    "question": "¿Cómo puedo interpretar si mi consumo energético doméstico es alto o bajo según CleanLyfe?",
+    "keywords": ["consumo", "energetico", "domestico", "interpretar", "alto", "bajo", "cleanlyfe"],
+    "synonyms": ["uso", "energia", "casa", "hogar", "entender", "comprender", "elevado", "reducido", "nivel"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 87
+  },
+  {
+    "question_id": "recommendations_8",
+    "topic_id": "recommendations",
+    "question": "¿Qué significa una huella hídrica de 150 litros por día y cómo puedo reducirla?",
+    "keywords": ["huella", "hidrica", "litros", "dia", "significar", "reducir", "agua", "consumo"],
+    "synonyms": ["consumo", "agua", "diario", "diaria", "querer", "decir", "disminuir", "bajar", "uso"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 88
+  },
+  {
+    "question_id": "recommendations_9",
+    "topic_id": "recommendations",
+    "question": "¿Cuáles son los valores de referencia para considerar una huella de carbono personal sostenible?",
+    "keywords": ["valor", "referencia", "considerar", "huella", "carbono", "personal", "sostenible"],
+    "synonyms": ["parametro", "benchmark", "evaluar", "CO2", "individual", "sustentable", "verde", "limite"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 91
+  },
+  {
+    "question_id": "dashboard_metrics_1",
+    "topic_id": "data_visualization",
+    "question": "¿Qué indica un puntaje de eficiencia energética de 7/10 en el dashboard de CleanLyfe?",
+    "keywords": ["puntaje", "eficiencia", "energetica", "dashboard", "cleanlyfe", "indicar", "metrica"],
+    "synonyms": ["puntuacion", "calificacion", "energia", "panel", "tablero", "mostrar", "significar", "score"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 74
+  },
+  {
+    "question_id": "dashboard_metrics_2",
+    "topic_id": "data_visualization",
+    "question": "¿Cómo se calcula el índice de sostenibilidad general que muestra CleanLyfe?",
+    "keywords": ["calcular", "indice", "sostenibilidad", "general", "mostrar", "cleanlyfe", "metrica"],
+    "synonyms": ["computar", "indicador", "sustentabilidad", "global", "ensenar", "formula", "medida"],
+    "project": "cleanlyfe",
+    "difficulty": "advanced",
+    "weight": 75
+  },
+  {
+    "question_id": "dashboard_metrics_3",
+    "topic_id": "data_visualization",
+    "question": "¿Qué representa el gráfico de tendencia mensual de consumo hídrico en el dashboard?",
+    "keywords": ["grafico", "tendencia", "mensual", "consumo", "hidrico", "dashboard", "representar"],
+    "synonyms": ["chart", "patron", "mes", "uso", "agua", "panel", "mostrar", "significar", "tablero"],
+    "project": "cleanlyfe",
+    "difficulty": "basic",
+    "weight": 76
+  },
+  {
+    "question_id": "dashboard_metrics_4",
+    "topic_id": "data_visualization",
+    "question": "¿Cuándo considera CleanLyfe que el progreso hacia metas ambientales es insuficiente?",
+    "keywords": ["cuando", "considerar", "cleanlyfe", "progreso", "meta", "ambiental", "insuficiente"],
+    "synonyms": ["momento", "evaluar", "avance", "objetivo", "verde", "inadecuado", "bajo", "poco"],
+    "project": "cleanlyfe",
+    "difficulty": "intermediate",
+    "weight": 77
   }
 ]

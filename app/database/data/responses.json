@@ -474,5 +474,149 @@
     "confidence_bonus": 20,
     "follow_up": ["¿Cómo mejoro mis consultas?", "¿Qué temas faltan en la base?"],
     "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_6",
+    "response_text": "CleanLyfe recomienda priorizar el transporte público, bicicleta o caminar para trayectos cortos. Para distancias largas, sugiere compartir vehículos, usar transporte eléctrico cuando sea posible, y planificar rutas eficientes que combinen múltiples actividades. También aconseja trabajar desde casa cuando sea viable y considerar vehículos híbridos o eléctricos para reducir significativamente las emisiones de transporte.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Cuánto CO₂ ahorro usando transporte público?", "¿Cómo calculo la eficiencia de mis rutas?", "¿Qué vehículos eléctricos recomienda CleanLyfe?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_6",
+    "response_text": "La plataforma sugiere reducir el uso del automóvil personal optando por transporte público, bicicleta o caminatas. Recomienda carpooling para viajes largos, mantenimiento regular del vehículo para mejor eficiencia, y planificación de rutas para minimizar distancias. Para quienes manejan, aconseja conducción eficiente con aceleración suave y velocidad constante.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Cómo mejoro la eficiencia de mi vehículo?", "¿Qué es carpooling?", "¿Cómo mido mi eficiencia de conducción?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_7",
+    "response_text": "CleanLyfe considera que un consumo energético doméstico es alto cuando supera los 350 kWh mensuales para una familia promedio. Un consumo bajo estaría por debajo de 200 kWh mensuales. La plataforma compara tu consumo con hogares similares en tu región y te clasifica con códigos de color: verde (eficiente), amarillo (moderado) y rojo (alto consumo), proporcionando recomendaciones específicas para cada nivel.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 19,
+    "follow_up": ["¿Cómo se compara mi región con otras?", "¿Qué factores influyen en el consumo promedio?", "¿Puedo ver el desglose por electrodomésticos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_7",
+    "response_text": "La interpretación se basa en benchmarks regionales y del tamaño del hogar. Un hogar de 3-4 personas con consumo superior a 400 kWh mensuales se considera alto, mientras que menos de 250 kWh es eficiente. CleanLyfe muestra tu posición mediante percentiles: estar en el 25% inferior indica excelente eficiencia, mientras que el 75% superior sugiere necesidad de optimización urgente.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 17,
+    "follow_up": ["¿Qué son los percentiles de consumo?", "¿Cómo mejoro mi percentil?", "¿Qué considera CleanLyfe como optimización urgente?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_8",
+    "response_text": "Una huella hídrica de 150 litros por día está dentro del rango promedio mundial (150-200 litros), pero puede optimizarse. Para reducirla, CleanLyfe sugiere duchas más cortas (5-7 minutos), reparar fugas inmediatamente, usar electrodomésticos eficientes, recolectar agua de lluvia para riego, y optar por alimentos con menor huella hídrica como vegetales locales en lugar de productos importados o carne intensiva.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 19,
+    "follow_up": ["¿Qué alimentos tienen mayor huella hídrica?", "¿Cómo recolecto agua de lluvia?", "¿Cuánta agua ahorro con duchas cortas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_8",
+    "response_text": "150 litros diarios representa un consumo moderado que puede mejorarse significativamente. CleanLyfe recomienda instalar dispositivos ahorradores en grifos y duchas, usar lavadora y lavavajillas solo con cargas completas, reutilizar agua gris para plantas, y cambiar hábitos alimenticios hacia productos de menor impacto hídrico. El objetivo es reducir a 100-120 litros diarios mediante estas acciones.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Qué son los dispositivos ahorradores?", "¿Cómo reutilizo el agua gris?", "¿Cuál es el impacto hídrico de diferentes alimentos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_9",
+    "response_text": "CleanLyfe establece que una huella de carbono personal sostenible debe estar por debajo de 2.3 toneladas de CO₂ anuales, alineándose con los objetivos del Acuerdo de París. El promedio mundial actual es de 4.8 toneladas, mientras que en países desarrollados puede superar las 10 toneladas. La plataforma clasifica: excelente (menos de 2 toneladas), bueno (2-4 toneladas), moderado (4-8 toneladas) y alto (más de 8 toneladas).",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 20,
+    "follow_up": ["¿Qué es el Acuerdo de París?", "¿Cómo llego a 2.3 toneladas anuales?", "¿Por qué varía tanto entre países?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "recommendations_9",
+    "response_text": "Los valores de referencia se basan en límites científicos para limitar el calentamiento global a 1.5°C. CleanLyfe considera sostenible una huella inferior a 2.5 toneladas CO₂ anuales por persona. Para contexto: el promedio en EE.UU. es 16 toneladas, en Europa 8 toneladas, y en países en desarrollo 3 toneladas. La plataforma proporciona metas graduales para alcanzar estos niveles sostenibles.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Qué significa limitar a 1.5°C?", "¿Cómo se calculan estas metas graduales?", "¿Qué puedo hacer para reducir 8 toneladas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_1",
+    "response_text": "Un puntaje de 7/10 en eficiencia energética indica un buen desempeño con margen de mejora. CleanLyfe considera que tienes prácticas energéticas sólidas pero podrías optimizar aproximadamente 20-30% más. Este puntaje sugiere que ya implementas medidas básicas como LED y electrodomésticos eficientes, pero podrías mejorar en áreas como aislamiento térmico, programación de climatización o energías renovables.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Cómo mejoro mi aislamiento térmico?", "¿Qué es la programación de climatización?", "¿Cuánto cuesta instalar energías renovables?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_1",
+    "response_text": "El puntaje 7/10 coloca tu hogar en el percentil 70 de eficiencia energética, superando al 70% de hogares similares. CleanLyfe indica que tu consumo está optimizado pero no maximizado. Significa que has adoptado tecnologías eficientes básicas, pero aún puedes implementar medidas avanzadas como sistemas inteligentes de gestión energética, mejoras en aislamiento o generación solar.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 17,
+    "follow_up": ["¿Qué son los sistemas inteligentes de gestión energética?", "¿Cómo funciona la generación solar?", "¿Cuál es la diferencia entre optimizado y maximizado?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_2",
+    "response_text": "El índice de sostenibilidad general de CleanLyfe combina cinco métricas ponderadas: huella de carbono (30%), huella hídrica (25%), eficiencia energética (20%), gestión de residuos (15%) y movilidad sostenible (10%). Cada componente se normaliza en una escala 0-100, y el índice final es el promedio ponderado. Un índice superior a 75 se considera excelente, 50-75 bueno, y menos de 50 requiere mejoras significativas.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 19,
+    "follow_up": ["¿Por qué la huella de carbono tiene mayor peso?", "¿Cómo se normaliza cada métrica?", "¿Puedo personalizar las ponderaciones?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_2",
+    "response_text": "CleanLyfe calcula el índice mediante un algoritmo que evalúa tu desempeño en múltiples dimensiones ambientales comparado con benchmarks regionales. Integra datos de consumo energético, hídrico, emisiones de transporte, y hábitos de consumo. El cálculo incluye factores de normalización por región climática y tamaño del hogar, proporcionando una puntuación de 0-100 que refleja tu impacto ambiental integral.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Qué son los benchmarks regionales?", "¿Cómo afecta el clima a mi puntuación?", "¿Puedo ver el desglose por dimensión?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_3",
+    "response_text": "El gráfico de tendencia mensual muestra la evolución de tu consumo hídrico durante los últimos 12 meses, identificando patrones estacionales y cambios en hábitos. CleanLyfe lo utiliza para detectar anomalías como fugas (picos inesperados), efectos estacionales (mayor consumo en verano), y el impacto de medidas de ahorro implementadas. Las líneas incluyen tu consumo real, promedio móvil y meta mensual.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 19,
+    "follow_up": ["¿Cómo detecta CleanLyfe las fugas?", "¿Qué es el promedio móvil?", "¿Puedo ajustar mis metas mensuales?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_3",
+    "response_text": "Este gráfico visualiza tu progreso hídrico temporal, mostrando consumo mensual en litros con líneas de tendencia que revelan si estás mejorando o empeorando. CleanLyfe incluye marcadores para eventos importantes (instalación de dispositivos ahorradores, reparación de fugas) y compara tu tendencia con el promedio regional. Permite identificar meses críticos y planificar acciones específicas.",
+    "response_type": "explanation",
+    "tone": "casual",
+    "confidence_bonus": 17,
+    "follow_up": ["¿Cómo marco eventos importantes?", "¿Qué considera CleanLyfe como mes crítico?", "¿Puedo exportar estos datos?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_4",
+    "response_text": "CleanLyfe considera el progreso insuficiente cuando no alcanzas al menos el 70% de tu meta mensual durante dos meses consecutivos, o cuando tu índice de sostenibilidad general no mejora en 3 meses. También evalúa si las métricas individuales (carbono, agua, energía) muestran tendencias negativas o estancamiento. En estos casos, la plataforma activa alertas y sugiere intervenciones específicas para retomar el camino hacia tus objetivos.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 19,
+    "follow_up": ["¿Qué intervenciones específicas sugiere?", "¿Puedo ajustar el umbral del 70%?", "¿Cómo reseteo mis metas?"],
+    "usage_count": 0
+  },
+  {
+    "question_id": "dashboard_metrics_4",
+    "response_text": "El sistema evalúa progreso insuficiente mediante algoritmos que analizan la velocidad de mejora comparada con tu línea base y metas establecidas. Si tu puntuación general no aumenta al menos 5 puntos en 90 días, o si retrocedes en métricas clave por más de 15 días, CleanLyfe marca progreso insuficiente. Esto desencadena recomendaciones intensivas y posibles ajustes en las metas para hacerlas más realistas.",
+    "response_type": "explanation",
+    "tone": "technical",
+    "confidence_bonus": 18,
+    "follow_up": ["¿Qué son las recomendaciones intensivas?", "¿Cómo se ajustan las metas automáticamente?", "¿Puedo ver mi velocidad de mejora?"],
+    "usage_count": 0
   }
 ]

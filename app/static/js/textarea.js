@@ -8,7 +8,83 @@ function scrollHistoryToBottom() {
   historyContainer.scrollTop = historyContainer.scrollHeight;
 }
 
-window.addEventListener("load", scrollToBottom);
+function getHistory() {
+  fetch("/history", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.status === "success" && data.history) {
+        const historyContainer = document.getElementById("history-logs");
+        historyContainer.innerHTML = "";
+
+        const formatDate = (dateString) => {
+          if (!dateString || dateString === "Ahora") return "Ahora";
+          try {
+            const date = new Date(dateString);
+            const options = {
+              weekday: "short",
+              day: "2-digit",
+              month: "short",
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: false,
+            };
+            return date.toLocaleDateString("en-EN", options);
+          } catch (error) {
+            return dateString;
+          }
+        };
+
+        data.history.forEach((item) => {
+          const newLog = document.createElement("div");
+          newLog.className = "mb-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-all duration-200 shadow-sm hover:shadow-md";
+          newLog.innerHTML = `
+            <div class="flex flex-col gap-2 items-center justify-between mb-4">
+              <h4 class="text-sm font-semibold text-blue-600 bg-blue-50 p-3 py-1 rounded-full text-center">${item.topic || "Sin tema"}</h4>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">${formatDate(item.time)}</span>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg border-l-4 border-blue-500">
+                <div class="flex items-center mb-2">
+                  <svg class="w-4 h-4 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span class="text-sm font-semibold text-blue-700 uppercase tracking-wide">Pregunta</span>
+                </div>
+                <p class="text-sm text-gray-800 font-medium leading-relaxed">${item.question}</p>
+              </div>
+              
+              <div class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-lg border-l-4 border-green-500">
+                <div class="flex items-center mb-2">
+                  <svg class="w-4 h-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span class="text-sm font-semibold text-green-700 uppercase tracking-wide">Respuesta</span>
+                </div>
+                <p class="text-sm text-gray-800 leading-relaxed">${item.response}</p>
+              </div>
+            </div>
+          `;
+          historyContainer.appendChild(newLog);
+          scrollHistoryToBottom();
+        });
+      } else {
+        console.error("Error fetching history:", data);
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading history:", error);
+    });
+}
+
+window.addEventListener("load", () => {
+  scrollToBottom();
+  getHistory();
+});
 
 const textarea = document.querySelector("textarea");
 const sendButton = document.getElementById("send-button");
@@ -159,41 +235,7 @@ function proccessQuestion(questionText) {
           textarea.style.height = Math.min(textarea.scrollHeight, 120) + "px";
         });
       });
-
-      fetch("/history", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          if (data.status === "success" && data.history) {
-            const historyContainer = document.getElementById("history-logs");
-            historyContainer.innerHTML = "";
-
-            data.history.forEach((item) => {
-              const newLog = document.createElement("div");
-              newLog.className = "mb-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors shadow-sm";
-              newLog.innerHTML = `
-            <div class="flex items-center justify-between mb-2">
-              <h4 class="text-sm font-semibold text-blue-600">${item.topic || "Sin tema"}</h4>
-              <span class="text-xs text-gray-500">${item.time || "Ahora"}</span>
-            </div>
-            <div class="space-y-2">
-              <p class="text-sm text-gray-800"><span class="font-medium">Pregunta:</span> ${item.question}</p>
-              <p class="text-sm text-gray-700"><span class="font-medium">Respuesta:</span> ${item.response}</p>
-            </div>
-          `;
-              historyContainer.appendChild(newLog);
-              scrollHistoryToBottom();
-            });
-          } else {
-            console.error("Error fetching history:", data);
-          }
-        })
-        .catch((error) => {
-          console.error("Error loading history:", error);
-        });
+      getHistory();
     })
     .catch((error) => {
       // Remove loading message if error
